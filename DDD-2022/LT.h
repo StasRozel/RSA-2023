@@ -10,10 +10,10 @@
 #define	LEX_MAIN		 'm'	// main		
 #define	LEX_SEPARATOR	 ';'	// разделитель инструкций
 #define	LEX_COMMA		 ','	// разделитель параметров 		
-#define	LEX_LEFTBRACE	 '['	// начало блока		
-#define	LEX_BRACELET	 ']'	// конец блока		
-#define LEX_LEFT         '{'    // сдвиг влево
-#define LEX_RIGHT        '}'    // сдвиг вправо
+#define	LEX_LEFTBRACE	 '{'	// начало блока		
+#define	LEX_BRACELET	 '}'	// конец блока		
+#define LEX_LEFT         '['    // сдвиг влево
+#define LEX_RIGHT        ']'    // сдвиг вправо
 #define	LEX_LEFTHESIS	 '('	// начало списка параметров		
 #define	LEX_RIGHTTHESIS	 ')'	// конец списка параметров		
 #define	LEX_PLUS		 '+'	// сложение	

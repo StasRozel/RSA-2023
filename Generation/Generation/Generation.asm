@@ -22,7 +22,7 @@ ExitProcess PROTO:DWORD
 		LTRL1 sdword 5
 		LTRL2 byte 'Lenght + 10001:          ', 0
 		LTRL3 byte 'String copy11111:         ', 0
-		LTRL4 byte 'DDD-2022', 0
+		LTRL4 byte 'RSA-2022', 0
 		LTRL5 byte 'Test String', 0
 		LTRL6 byte '23', 0
 		LTRL7 byte 'Cycle:               ', 0
@@ -138,6 +138,10 @@ strings ENDP
 ;------------- MAIN --------------
 main PROC
 mov mainstrx, offset LTRL4
+
+push mainstrx
+call outstr
+
 mov mainstry, offset LTRL5
 mov mainstrz, offset LTRL6
 

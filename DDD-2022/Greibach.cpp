@@ -11,17 +11,17 @@ namespace GRB	// грамматика Грейбах
 		Rule(NS('S'), GRB_ERROR_SERIES, 3,						// Неверная структура программы	
 			Rule::Chain(6, TS('t'), TS('f'), TS('i'), NS('P'), NS('T'), NS('S')),
 			Rule::Chain(6, TS('p'), TS('f'), TS('i'), NS('P'), NS('G'), NS('S')),
-			Rule::Chain(4, TS('m'), TS('['), NS('K'), TS(']'))
+			Rule::Chain(4, TS('m'), TS('{'), NS('K'), TS('}'))
 		),
 
 		Rule(NS('T'), GRB_ERROR_SERIES + 2, 2,					// Ошибка в теле функции
-			Rule::Chain(5, TS('['), TS('e'), NS('V'), TS(';'), TS(']')),
-			Rule::Chain(6, TS('['), NS('K'), TS('e'), NS('V'), TS(';'), TS(']'))
+			Rule::Chain(5, TS('{'), TS('e'), NS('V'), TS(';'), TS('}')),
+			Rule::Chain(6, TS('{'), NS('K'), TS('e'), NS('V'), TS(';'), TS('}'))
 		),
 
 		Rule(NS('G'), GRB_ERROR_SERIES + 3, 2,					// Ошибка в теле скрипта
-			Rule::Chain(4, TS('['), TS('e'), TS(';'), TS(']')),
-			Rule::Chain(5, TS('['), NS('K'), TS('e'), TS(';'), TS(']'))
+			Rule::Chain(4, TS('{'), TS('e'), TS(';'), TS('}')),
+			Rule::Chain(5, TS('{'), NS('K'), TS('e'), TS(';'), TS('}'))
 		),
 
 		Rule(NS('P'), GRB_ERROR_SERIES + 1, 2,					// Не найден список параметров функции	
@@ -55,7 +55,7 @@ namespace GRB	// грамматика Грейбах
 		),
 
 		Rule(NS('Y'), GRB_ERROR_SERIES + 8, 1,					// Ошибка в теле цикла/условного выражения			
-			Rule::Chain(3, TS('['), NS('X'), TS(']'))
+			Rule::Chain(3, TS('{'), NS('X'), TS('}'))
 		),
 
 		Rule(NS('Z'), GRB_ERROR_SERIES + 9, 3,					// Ошибка в условии цикла/условного выражения	
@@ -76,8 +76,8 @@ namespace GRB	// грамматика Грейбах
 			Rule::Chain(1, TS('-')),
 			Rule::Chain(1, TS('*')),
 			Rule::Chain(1, TS('/')),
-			Rule::Chain(1, TS('}')),
-			Rule::Chain(1, TS('{')),
+			Rule::Chain(1, TS('[')),
+			Rule::Chain(1, TS(']')),
 			Rule::Chain(1, TS('%'))
 		),
 
