@@ -240,8 +240,14 @@
 	FST::NODE()
 
 
-#define GRAPH_NEW 4, \
-	FST::NODE(1, FST::RELATION('n', 1)),\
-	FST::NODE(1, FST::RELATION('e', 2)),\
-	FST::NODE(1, FST::RELATION('w', 3)),\
+#define GRAPH_NEW 10, \
+	FST::NODE(1, FST::RELATION('v', 1)),\
+	FST::NODE(1, FST::RELATION('a', 2)),\
+	FST::NODE(1, FST::RELATION('r', 3)),\
+	FST::NODE(1, FST::RELATION('i', 4)),\
+	FST::NODE(1, FST::RELATION('a', 5)),\
+	FST::NODE(1, FST::RELATION('b', 6)),\
+	FST::NODE(1, FST::RELATION('l', 7)),\
+	FST::NODE(1, FST::RELATION('e', 8)),\
+	FST::NODE(1, FST::RELATION(':', 9)),\
 	FST::NODE()

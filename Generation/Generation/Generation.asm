@@ -138,6 +138,9 @@ strings ENDP
 ;------------- MAIN --------------
 main PROC
 mov mainstrx, offset LTRL4
+push offset newline
+call outstr
+
 
 push mainstrx
 call outstr

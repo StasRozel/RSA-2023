@@ -1,6 +1,6 @@
 number function min(number x, number y)
 {
-	new number res;
+	variable: number res;
 	if: x < y #
 	istrue {res = x;}
 	isfalse {res = y;} #
@@ -9,13 +9,13 @@ number function min(number x, number y)
 
 script function strings (string a, string b)
 {
-	new number k;
+	variable: number k;
 	k = lenght(a) + 5;
         print "Lenght + 10001:          ";
 	print k;
 	newline;
 
-	new string str;
+	variable: string str;
 	str = strcopy(b);
         print "String copy11111:         ";
 	print str;
@@ -26,15 +26,16 @@ script function strings (string a, string b)
 
 main
 {
-	new string strx = "RSA-2022";
+	variable: string strx = "RSA-2022";
+	newline;
 	print strx;
-	new string stry = "Test String";
-        new string strz = "23";
+	variable: string stry = "Test String";
+        variable: string strz = "23";
 	strings(strx, stry);
 
 
 	print "Cycle:               ";
-	new number ab = 125;
+	variable: number ab = 125;
 	if: ab > 1 #
 	cycle {
 		print ab;
