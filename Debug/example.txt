@@ -11,14 +11,14 @@ script function strings (string a, string b)
 {
 	variable: number k;
 	k = lenght(a) + 5;
-        print "Lenght + 10001:          ";
-	print k;
+        write "Lenght + 10001:          ";
+	write k;
 	newline;
 
 	variable: string str;
 	str = strcopy(b);
-        print "String copy11111:         ";
-	print str;
+        write "String copy11111:         ";
+	write str;
 	newline;
 	return;
 }
@@ -28,19 +28,11 @@ main
 {
 	variable: string strx = "RSA-2022";
 	newline;
-	print strx;
+	write strx;
+	write strx;
+	newline;
 	variable: string stry = "Test String";
         variable: string strz = "23";
 	strings(strx, stry);
-
-
-	print "Cycle:               ";
-	variable: number ab = 125;
-	if: ab > 1 #
-	cycle {
-		print ab;
-		print "; ";
-		ab = ab / 3;
-	} #
 	newline;
 }

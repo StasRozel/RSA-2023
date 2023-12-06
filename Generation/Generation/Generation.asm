@@ -145,6 +145,13 @@ call outstr
 push mainstrx
 call outstr
 
+
+push mainstrx
+call outstr
+
+push offset newline
+call outstr
+
 mov mainstry, offset LTRL5
 mov mainstrz, offset LTRL6
 

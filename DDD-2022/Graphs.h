@@ -201,11 +201,11 @@
 
 
 #define GRAPH_WRITE 6, \
-	FST::NODE(1, FST::RELATION('p', 1)),\
+	FST::NODE(1, FST::RELATION('w', 1)),\
 	FST::NODE(1, FST::RELATION('r', 2)),\
 	FST::NODE(1, FST::RELATION('i', 3)),\
-	FST::NODE(1, FST::RELATION('n', 4)),\
-	FST::NODE(1, FST::RELATION('t', 5)),\
+	FST::NODE(1, FST::RELATION('t', 4)),\
+	FST::NODE(1, FST::RELATION('e', 5)),\
 	FST::NODE()
 
 
