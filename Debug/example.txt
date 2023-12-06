@@ -26,13 +26,17 @@ script function strings (string a, string b)
 
 main
 {
-	variable: string strx = "RSA-2022";
+	variable: string strx = "RSA-2023";
 	newline;
 	write strx;
+	newline;
 	write strx;
 	newline;
 	variable: string stry = "Test String";
         variable: string strz = "23";
 	strings(strx, stry);
+	newline;
+	write strx;
+	write strx;
 	newline;
 }

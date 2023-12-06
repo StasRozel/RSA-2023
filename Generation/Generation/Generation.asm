@@ -22,14 +22,9 @@ ExitProcess PROTO:DWORD
 		LTRL1 sdword 5
 		LTRL2 byte 'Lenght + 10001:          ', 0
 		LTRL3 byte 'String copy11111:         ', 0
-		LTRL4 byte 'RSA-2022', 0
+		LTRL4 byte 'RSA-2023', 0
 		LTRL5 byte 'Test String', 0
 		LTRL6 byte '23', 0
-		LTRL7 byte 'Cycle:               ', 0
-		LTRL8 sdword 125
-		LTRL9 sdword 1
-		LTRL10 byte '; ', 0
-		LTRL11 sdword 3
 .data
 		temp sdword ?
 		buffer byte 256 dup(0)
@@ -39,7 +34,6 @@ ExitProcess PROTO:DWORD
 		mainstrx dword ?
 		mainstry dword ?
 		mainstrz dword ?
-		mainab sdword 0
 .code
 
 ;------------- min --------------
@@ -145,6 +139,9 @@ call outstr
 push mainstrx
 call outstr
 
+push offset newline
+call outstr
+
 
 push mainstrx
 call outstr
@@ -159,45 +156,17 @@ push mainstry
 push mainstrx
 call strings
 
-
-push offset LTRL7
+push offset newline
 call outstr
 
-push LTRL8
 
-pop ebx
-mov mainab, ebx
-
-mov edx, mainab
-cmp edx, LTRL9
-
-jg cycle2
-jmp cyclenext2
-cycle2:
-
-push mainab
-call outnum
-
-
-push offset LTRL10
+push mainstrx
 call outstr
 
-push mainab
-push LTRL11
-pop ebx
-pop eax
-cdq
-idiv ebx
-push eax
 
-pop ebx
-mov mainab, ebx
+push mainstrx
+call outstr
 
-mov edx, mainab
-cmp edx, LTRL9
-
-jg cycle2
-cyclenext2:
 push offset newline
 call outstr
 

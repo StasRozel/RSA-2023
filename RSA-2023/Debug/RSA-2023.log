@@ -1,0 +1,55 @@
+﻿Сборка начата 06.12.2023 19:48:13.
+Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" в узле 4 (целевые объекты Rebuild).
+     1>_PrepareForClean:
+         Файл "Debug\RSA-2023.tlog\RSA-2023.lastbuildstate" удаляется.
+     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (DDD-2022.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+       InitializeBuildStatus:
+         Создание "Debug\RSA-2023.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt "RSA-2023.cpp" Error.cpp FST.cpp Generator.cpp Greibach.cpp In.cpp Log.cpp LT.cpp MFST.cpp Parm.cpp LexAnalysis.cpp IT.cpp PolishNotation.cpp SemAnalysis.cpp
+         RSA-2023.cpp
+         Error.cpp
+         FST.cpp
+         Generator.cpp
+         Greibach.cpp
+         In.cpp
+         Log.cpp
+         LT.cpp
+         MFST.cpp
+         Parm.cpp
+         LexAnalysis.cpp
+         IT.cpp
+         PolishNotation.cpp
+         SemAnalysis.cpp
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\app\RSA-2023\Debug\RSA-2023.exe" /INCREMENTAL /ILK:"Debug\RSA-2023.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\app\RSA-2023\Debug\RSA-2023.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\app\RSA-2023\Debug\RSA-2023.lib" /MACHINE:X86 "Debug\RSA-2023.obj"
+         Debug\Error.obj
+         Debug\FST.obj
+         Debug\Generator.obj
+         Debug\Greibach.obj
+         Debug\In.obj
+         Debug\Log.obj
+         Debug\LT.obj
+         Debug\MFST.obj
+         Debug\Parm.obj
+         Debug\LexAnalysis.obj
+         Debug\IT.obj
+         Debug\PolishNotation.obj
+         Debug\SemAnalysis.obj
+         RSA-2023.vcxproj -> D:\app\RSA-2023\Debug\RSA-2023.exe
+       FinalizeBuildStatus:
+         Файл "Debug\RSA-2023.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\RSA-2023.tlog\RSA-2023.lastbuildstate".
+     1>Сборка проекта "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+       "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" (целевой объект Rebuild ) (1) ->
+       (Целевой объект PrepareForBuild) -> 
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (DDD-2022.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+
+    Предупреждений: 1
+    Ошибок: 0
+
+Прошло времени 00:00:27.41

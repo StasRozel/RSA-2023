@@ -1,22 +1,22 @@
-﻿Сборка начата 06.12.2023 3:10:56.
-Уровень детализации журнала: Normal.     1>Проект "D:\app\DDD-2022\Generation\GenLib\GenLib.vcxproj" в узле 3 (целевые объекты Rebuild).
+﻿Сборка начата 06.12.2023 19:48:13.
+Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\Generation\GenLib\GenLib.vcxproj" в узле 3 (целевые объекты Rebuild).
      1>_PrepareForClean:
          Файл "Debug\GenLib.tlog\GenLib.lastbuildstate" удаляется.
        InitializeBuildStatus:
          Создание "Debug\GenLib.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"D:\app\DDD-2022\Debug\GenLib.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt GenLib.cpp
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"D:\app\RSA-2023\Debug\GenLib.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt GenLib.cpp
          GenLib.cpp
        Lib:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\Lib.exe /OUT:"D:\app\DDD-2022\Debug\GenLib.lib" /NOLOGO /MACHINE:X86 Debug\GenLib.obj
-         GenLib.vcxproj -> D:\app\DDD-2022\Debug\GenLib.lib
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\Lib.exe /OUT:"D:\app\RSA-2023\Debug\GenLib.lib" /NOLOGO /MACHINE:X86 Debug\GenLib.obj
+         GenLib.vcxproj -> D:\app\RSA-2023\Debug\GenLib.lib
        FinalizeBuildStatus:
          Файл "Debug\GenLib.tlog\unsuccessfulbuild" удаляется.
          Обращение к "Debug\GenLib.tlog\GenLib.lastbuildstate".
-     1>Сборка проекта "D:\app\DDD-2022\Generation\GenLib\GenLib.vcxproj" завершена (целевые объекты Rebuild).
+     1>Сборка проекта "D:\app\RSA-2023\Generation\GenLib\GenLib.vcxproj" завершена (целевые объекты Rebuild).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.21
+Прошло времени 00:00:04.75
