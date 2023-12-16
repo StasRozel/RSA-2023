@@ -48,7 +48,7 @@ namespace In
 		F (FALSE) Ц запрещЄнный
 		T (TRUE) Ц разрешЄнный
 		I (IGNORED) Ц игнорируемый
-		Q Ц "
+		Q Ц "(кавычки)
 		*/
 		enum { T = 1024, F = 2048, I = 4096, S, Q, P, N };
 		int code[256] = IN_CODE_TABLE;

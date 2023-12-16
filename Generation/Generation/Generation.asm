@@ -19,157 +19,60 @@ ExitProcess PROTO:DWORD
 
 .const
 		newline byte 13, 10, 0
-		LTRL1 sdword 5
-		LTRL2 byte 'Lenght + 10001:          ', 0
-		LTRL3 byte 'String copy11111:         ', 0
-		LTRL4 byte 'RSA-2023', 0
-		LTRL5 byte 'Test String', 0
-		LTRL6 byte '23', 0
+		LTRL1 byte 'RSA-2022', 0
+		LTRL2 sdword 10
+		LTRL3 sdword 1
+		LTRL4 sdword 2
 .data
 		temp sdword ?
 		buffer byte 256 dup(0)
-		minres sdword 0
-		stringsk sdword 0
-		stringsstr dword ?
 		mainstrx dword ?
-		mainstry dword ?
-		mainstrz dword ?
+		mainx sdword 0
 .code
 
-;------------- min --------------
-min PROC,
-	minx : sdword, miny : sdword  
-; -------- save registers -------
-push ebx
-push edx
-; -------------------------------
-mov edx, minx
-cmp edx, miny
+;------------- MAIN --------------
+main PROC
+mov mainstrx, offset LTRL1
 
-jl right1
-jg wrong1
-right1:
-push minx
-
-pop ebx
-mov minres, ebx
-
-jmp next1
-wrong1:
-push miny
-
-pop ebx
-mov minres, ebx
-
-next1:
-; ------ restore registers ------
-pop edx
-pop ebx
-; -------------------------------
-mov eax, minres
-ret
-min ENDP
-;---------------
-
-
-;------------- strings --------------
-strings PROC,
-	stringsa : dword, stringsb : dword  
-; -------- save registers -------
-push ebx
-push edx
-; -------------------------------
-
-push stringsa
-push offset buffer
-call lenght
-push eax
-push LTRL1
-pop ebx
-pop eax
-add eax, ebx
-push eax
-
-pop ebx
-mov stringsk, ebx
-
-
-push offset LTRL2
+push mainstrx
 call outstr
 
+push offset newline
+call outstr
 
-push stringsk
+push LTRL2
+
+pop ebx
+mov mainx, ebx
+
+mov edx, mainx
+cmp edx, LTRL3
+
+jg cycle1
+jmp cyclenext1
+cycle1:
+
+push mainx
 call outnum
 
 push offset newline
 call outstr
 
-
-push stringsb
-push offset buffer
-call strcopy
-mov stringsstr, eax
-
-push offset LTRL3
-call outstr
-
-
-push stringsstr
-call outstr
-
-push offset newline
-call outstr
-
-; ------ restore registers ------
-pop edx
+push mainx
+push LTRL4
 pop ebx
-; -------------------------------
-ret
-strings ENDP
-;---------------
+pop eax
+sub eax, ebx
+push eax
 
+pop ebx
+mov mainx, ebx
 
-;------------- MAIN --------------
-main PROC
-mov mainstrx, offset LTRL4
-push offset newline
-call outstr
+mov edx, mainx
+cmp edx, LTRL3
 
-
-push mainstrx
-call outstr
-
-push offset newline
-call outstr
-
-
-push mainstrx
-call outstr
-
-push offset newline
-call outstr
-
-mov mainstry, offset LTRL5
-mov mainstrz, offset LTRL6
-
-push mainstry
-push mainstrx
-call strings
-
-push offset newline
-call outstr
-
-
-push mainstrx
-call outstr
-
-
-push mainstrx
-call outstr
-
-push offset newline
-call outstr
-
+jg cycle1
+cyclenext1:
 push 0
 call ExitProcess
 main ENDP

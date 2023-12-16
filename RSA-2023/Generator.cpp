@@ -8,7 +8,6 @@
 #include <sstream>
 #include <cstring>
 
-
 using namespace std;
 
 namespace Gener		// генерация кода в assembler
@@ -302,6 +301,28 @@ namespace Gener		// генерация кода в assembler
 			{
 				str = genEqualCode(tables, log, i);
 				while (LEXEMA(++i) != LEX_SEPARATOR);	// пропуск выражения
+				break;
+			}
+			case LEX_WRITELINE:	//вывод с перевод строки 
+			{
+				IT::Entry e = ITENTRY(i + 1);
+				switch (e.iddatatype)
+				{
+				case IT::IDDATATYPE::NUM:	// вывод целочисленного литерала
+					str = str + "\npush " + e.id + "\ncall outnum\n\n";
+					str = str + "push offset newline\ncall outstr\n";
+					break;
+				case IT::IDDATATYPE::STR:	// вывод строкового литерала
+					if (e.idtype == IT::IDTYPE::L) {
+						str = str + "\npush offset " + e.id + "\ncall outstr\n\n";
+						str = str + "push offset newline\ncall outstr\n";
+					}
+					else {
+						str = str + "\npush " + e.id + "\ncall outstr\n\n";
+						str = str + "push offset newline\ncall outstr\n";
+					}
+					break;
+				}
 				break;
 			}
 			case LEX_NEWLINE:	// перевод строки 

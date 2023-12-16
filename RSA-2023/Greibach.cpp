@@ -98,12 +98,13 @@ namespace GRB	// грамматика Грейбах
 			Rule::Chain(4, TS('i'), NS('F'), NS('A'), NS('W'))
 		),
 
-		Rule(NS('K'), GRB_ERROR_SERIES + 14, 14,				// Недопустимая синтаксическая конструкция
+		Rule(NS('K'), GRB_ERROR_SERIES + 14, 15,				// Недопустимая синтаксическая конструкция
 			Rule::Chain(7, TS('n'), TS('t'), TS('i'), TS('='), NS('V'), TS(';'), NS('K')),	// декларация + присваивание
 			Rule::Chain(5, TS('n'), TS('t'), TS('i'), TS(';'), NS('K')),	// декларация
 			Rule::Chain(5, TS('i'), TS('='), NS('W'), TS(';'), NS('K')),	// присваивание
 
 			Rule::Chain(4, TS('o'), NS('V'), TS(';'), NS('K')),				// вывод
+			Rule::Chain(4, TS('d'), NS('V'), TS(';'), NS('K')),				// вывод с переводом строки			// вывод с переводом строки
 			Rule::Chain(3, TS('^'), TS(';'), NS('K')),						// перевод строки
 			Rule::Chain(5, TS('?'), NS('Z'), TS('#'), NS('R'), NS('K')),	// condition
 			Rule::Chain(4, TS('i'), NS('F'), TS(';'), NS('K')),				// вызов функции
@@ -112,19 +113,22 @@ namespace GRB	// грамматика Грейбах
 			Rule::Chain(4, TS('i'), TS('='), NS('W'), TS(';')),			// присваивание
 			Rule::Chain(4, TS('n'), TS('t'), TS('i'), TS(';')),			// декларация
 			Rule::Chain(3, TS('o'), NS('V'), TS(';')),					// вывод
+			Rule::Chain(3, TS('d'), NS('V'), TS(';')),					// вывод с переводом строки
 			Rule::Chain(2, TS('^'), TS(';')),							// перевод строки
 			Rule::Chain(4, TS('?'), NS('Z'), TS('#'), NS('R')),			// condition
 			Rule::Chain(3, TS('i'), NS('F'), TS(';'))					// вызов функции
 		),
 
-		Rule(NS('X'), GRB_ERROR_SERIES + 15, 8,				// Недопустимая синтаксическая конструкция в теле цикла/условного выражения	
+		Rule(NS('X'), GRB_ERROR_SERIES + 15, 9,				// Недопустимая синтаксическая конструкция в теле цикла/условного выражения	
 			Rule::Chain(5, TS('i'), TS('='), NS('W'), TS(';'), NS('X')),	// присваивание
 			Rule::Chain(4, TS('o'), NS('V'), TS(';'), NS('X')),				// вывод
+			Rule::Chain(4, TS('d'), NS('V'), TS(';'), NS('X')),				// вывод
 			Rule::Chain(3, TS('^'), TS(';'), NS('X')),						// перевод строки
 			Rule::Chain(4, TS('i'), NS('F'), TS(';'), NS('X')),				// вызов функции
 
 			Rule::Chain(4, TS('i'), TS('='), NS('W'), TS(';')),			// присваивание
 			Rule::Chain(3, TS('o'), NS('V'), TS(';')),					// вывод
+			Rule::Chain(3, TS('d'), NS('V'), TS(';')),					// вывод
 			Rule::Chain(2, TS('^'), TS(';')),							// перевод строки
 			Rule::Chain(3, TS('i'), NS('F'), TS(';'))					// вызов функции
 		)

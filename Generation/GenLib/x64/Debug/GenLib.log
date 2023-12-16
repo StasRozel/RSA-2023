@@ -1,0 +1,22 @@
+﻿Сборка начата 06.12.2023 20:11:50.
+Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\Generation\GenLib\GenLib.vcxproj" в узле 3 (целевые объекты Rebuild).
+     1>PrepareForBuild:
+         Создание каталога "x64\Debug\GenLib.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\GenLib.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"D:\app\RSA-2023\x64\Debug\GenLib.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt GenLib.cpp
+         GenLib.cpp
+       Lib:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\Lib.exe /OUT:"D:\app\RSA-2023\x64\Debug\GenLib.lib" /NOLOGO /MACHINE:X64 x64\Debug\GenLib.obj
+         GenLib.vcxproj -> D:\app\RSA-2023\x64\Debug\GenLib.lib
+       FinalizeBuildStatus:
+         Файл "x64\Debug\GenLib.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\GenLib.tlog\GenLib.lastbuildstate".
+     1>Сборка проекта "D:\app\RSA-2023\Generation\GenLib\GenLib.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:04.13

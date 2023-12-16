@@ -1,94 +1,109 @@
-﻿  Assembling Generation.asm...
-Generation.asm(1): error A2008: syntax error : .
-Generation.asm(2): error A2008: syntax error : .
-Generation.asm(7): error A2008: syntax error : .
-Generation.asm(67): error A2070: invalid instruction operands
-Generation.asm(68): error A2070: invalid instruction operands
-Generation.asm(76): error A2070: invalid instruction operands
-Generation.asm(78): error A2070: invalid instruction operands
-Generation.asm(83): error A2070: invalid instruction operands
-Generation.asm(85): error A2070: invalid instruction operands
-Generation.asm(90): error A2070: invalid instruction operands
-Generation.asm(91): error A2070: invalid instruction operands
-Generation.asm(103): error A2070: invalid instruction operands
-Generation.asm(104): error A2070: invalid instruction operands
-Generation.asm(107): error A2070: invalid instruction operands
-Generation.asm(108): error A2070: invalid instruction operands
-Generation.asm(110): error A2070: invalid instruction operands
-Generation.asm(111): error A2070: invalid instruction operands
-Generation.asm(112): error A2070: invalid instruction operands
-Generation.asm(113): error A2070: invalid instruction operands
-Generation.asm(115): error A2070: invalid instruction operands
-Generation.asm(117): error A2070: invalid instruction operands
-Generation.asm(121): error A2070: invalid instruction operands
-Generation.asm(125): error A2070: invalid instruction operands
-Generation.asm(128): error A2070: invalid instruction operands
-Generation.asm(132): error A2070: invalid instruction operands
-Generation.asm(133): error A2070: invalid instruction operands
-Generation.asm(137): error A2070: invalid instruction operands
-Generation.asm(141): error A2070: invalid instruction operands
-Generation.asm(144): error A2070: invalid instruction operands
-Generation.asm(148): error A2070: invalid instruction operands
-Generation.asm(149): error A2070: invalid instruction operands
-Generation.asm(158): error A2070: invalid instruction operands
-Generation.asm(160): error A2070: invalid instruction operands
-Generation.asm(163): error A2070: invalid instruction operands
-Generation.asm(165): error A2070: invalid instruction operands
-Generation.asm(168): error A2070: invalid instruction operands
-Generation.asm(169): error A2070: invalid instruction operands
-Generation.asm(170): error A2070: invalid instruction operands
-Generation.asm(172): error A2070: invalid instruction operands
-Generation.asm(174): error A2070: invalid instruction operands
-Generation.asm(177): error A2070: invalid instruction operands
-Generation.asm(181): error A2070: invalid instruction operands
-Generation.asm(185): error A2070: invalid instruction operands
-Generation.asm(188): error A2070: invalid instruction operands
-Generation.asm(195): error A2070: invalid instruction operands
-Generation.asm(196): error A2070: invalid instruction operands
-Generation.asm(200): error A2070: invalid instruction operands
-Generation.asm(203): error A2070: invalid instruction operands
-Generation.asm(205): error A2070: invalid instruction operands
-Generation.asm(215): error A2070: invalid instruction operands
-Generation.asm(219): error A2070: invalid instruction operands
-Generation.asm(222): error A2070: invalid instruction operands
-Generation.asm(223): error A2070: invalid instruction operands
-Generation.asm(224): error A2070: invalid instruction operands
-Generation.asm(225): error A2070: invalid instruction operands
-Generation.asm(228): error A2070: invalid instruction operands
-Generation.asm(230): error A2070: invalid instruction operands
-Generation.asm(238): error A2070: invalid instruction operands
-Generation.asm(242): error A2070: invalid instruction operands
-Generation.asm(246): error A2070: invalid instruction operands
-Generation.asm(249): error A2070: invalid instruction operands
-Generation.asm(252): error A2070: invalid instruction operands
-Generation.asm(254): error A2070: invalid instruction operands
-Generation.asm(257): error A2070: invalid instruction operands
-Generation.asm(259): error A2070: invalid instruction operands
-Generation.asm(263): error A2070: invalid instruction operands
-Generation.asm(264): error A2070: invalid instruction operands
-Generation.asm(266): error A2070: invalid instruction operands
-Generation.asm(268): error A2070: invalid instruction operands
-Generation.asm(272): error A2070: invalid instruction operands
-Generation.asm(276): error A2070: invalid instruction operands
-Generation.asm(279): error A2070: invalid instruction operands
-Generation.asm(283): error A2070: invalid instruction operands
-Generation.asm(287): error A2070: invalid instruction operands
-Generation.asm(288): error A2070: invalid instruction operands
-Generation.asm(290): error A2070: invalid instruction operands
-Generation.asm(292): error A2070: invalid instruction operands
-Generation.asm(296): error A2070: invalid instruction operands
-Generation.asm(299): error A2070: invalid instruction operands
-Generation.asm(302): error A2070: invalid instruction operands
-Generation.asm(304): error A2070: invalid instruction operands
-Generation.asm(307): error A2070: invalid instruction operands
-Generation.asm(308): error A2070: invalid instruction operands
-Generation.asm(309): error A2070: invalid instruction operands
-Generation.asm(310): error A2070: invalid instruction operands
-Generation.asm(313): error A2070: invalid instruction operands
-Generation.asm(315): error A2070: invalid instruction operands
-Generation.asm(319): error A2070: invalid instruction operands
-Generation.asm(323): error A2070: invalid instruction operands
-Generation.asm(326): error A2070: invalid instruction operands
-Generation.asm(332): error A2008: syntax error : main
-Generation.asm(332): error A2088: END directive required at end of file
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm" с кодом "1".
+﻿Сборка начата 06.12.2023 20:12:35.
+Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Обращение к "x64\Debug\Generation.tlog\unsuccessfulbuild".
+       _MASM:
+         Assembling Generation.asm...
+         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmp95356c8eff2d41e8994b8bf477eb1c29.cmd"
+         ml64.exe /c /nologo /Zi /Fo"x64\Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm
+     1>Generation.asm(1): error A2008: syntax error : .
+     1>Generation.asm(2): error A2008: syntax error : .
+     1>Generation.asm(7): error A2008: syntax error : .
+     1>Generation.asm(43): error A2070: invalid instruction operands
+     1>Generation.asm(44): error A2070: invalid instruction operands
+     1>Generation.asm(52): error A2070: invalid instruction operands
+     1>Generation.asm(54): error A2070: invalid instruction operands
+     1>Generation.asm(59): error A2070: invalid instruction operands
+     1>Generation.asm(61): error A2070: invalid instruction operands
+     1>Generation.asm(66): error A2070: invalid instruction operands
+     1>Generation.asm(67): error A2070: invalid instruction operands
+     1>Generation.asm(79): error A2070: invalid instruction operands
+     1>Generation.asm(80): error A2070: invalid instruction operands
+     1>Generation.asm(83): error A2070: invalid instruction operands
+     1>Generation.asm(84): error A2070: invalid instruction operands
+     1>Generation.asm(86): error A2070: invalid instruction operands
+     1>Generation.asm(87): error A2070: invalid instruction operands
+     1>Generation.asm(88): error A2070: invalid instruction operands
+     1>Generation.asm(89): error A2070: invalid instruction operands
+     1>Generation.asm(91): error A2070: invalid instruction operands
+     1>Generation.asm(93): error A2070: invalid instruction operands
+     1>Generation.asm(97): error A2070: invalid instruction operands
+     1>Generation.asm(101): error A2070: invalid instruction operands
+     1>Generation.asm(104): error A2070: invalid instruction operands
+     1>Generation.asm(108): error A2070: invalid instruction operands
+     1>Generation.asm(109): error A2070: invalid instruction operands
+     1>Generation.asm(113): error A2070: invalid instruction operands
+     1>Generation.asm(117): error A2070: invalid instruction operands
+     1>Generation.asm(120): error A2070: invalid instruction operands
+     1>Generation.asm(124): error A2070: invalid instruction operands
+     1>Generation.asm(125): error A2070: invalid instruction operands
+     1>Generation.asm(135): error A2070: invalid instruction operands
+     1>Generation.asm(139): error A2070: invalid instruction operands
+     1>Generation.asm(142): error A2070: invalid instruction operands
+     1>Generation.asm(146): error A2070: invalid instruction operands
+     1>Generation.asm(149): error A2070: invalid instruction operands
+     1>Generation.asm(155): error A2070: invalid instruction operands
+     1>Generation.asm(156): error A2070: invalid instruction operands
+     1>Generation.asm(159): error A2070: invalid instruction operands
+     1>Generation.asm(163): error A2070: invalid instruction operands
+     1>Generation.asm(167): error A2070: invalid instruction operands
+     1>Generation.asm(170): error A2070: invalid instruction operands
+     1>Generation.asm(176): error A2008: syntax error : main
+     1>Generation.asm(176): error A2088: END directive required at end of file
+     1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm" с кодом "1".
+     1>Сборка проекта "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+       "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект _MASM) -> 
+         Generation.asm(1): error A2008: syntax error : .
+         Generation.asm(2): error A2008: syntax error : .
+         Generation.asm(7): error A2008: syntax error : .
+         Generation.asm(43): error A2070: invalid instruction operands
+         Generation.asm(44): error A2070: invalid instruction operands
+         Generation.asm(52): error A2070: invalid instruction operands
+         Generation.asm(54): error A2070: invalid instruction operands
+         Generation.asm(59): error A2070: invalid instruction operands
+         Generation.asm(61): error A2070: invalid instruction operands
+         Generation.asm(66): error A2070: invalid instruction operands
+         Generation.asm(67): error A2070: invalid instruction operands
+         Generation.asm(79): error A2070: invalid instruction operands
+         Generation.asm(80): error A2070: invalid instruction operands
+         Generation.asm(83): error A2070: invalid instruction operands
+         Generation.asm(84): error A2070: invalid instruction operands
+         Generation.asm(86): error A2070: invalid instruction operands
+         Generation.asm(87): error A2070: invalid instruction operands
+         Generation.asm(88): error A2070: invalid instruction operands
+         Generation.asm(89): error A2070: invalid instruction operands
+         Generation.asm(91): error A2070: invalid instruction operands
+         Generation.asm(93): error A2070: invalid instruction operands
+         Generation.asm(97): error A2070: invalid instruction operands
+         Generation.asm(101): error A2070: invalid instruction operands
+         Generation.asm(104): error A2070: invalid instruction operands
+         Generation.asm(108): error A2070: invalid instruction operands
+         Generation.asm(109): error A2070: invalid instruction operands
+         Generation.asm(113): error A2070: invalid instruction operands
+         Generation.asm(117): error A2070: invalid instruction operands
+         Generation.asm(120): error A2070: invalid instruction operands
+         Generation.asm(124): error A2070: invalid instruction operands
+         Generation.asm(125): error A2070: invalid instruction operands
+         Generation.asm(135): error A2070: invalid instruction operands
+         Generation.asm(139): error A2070: invalid instruction operands
+         Generation.asm(142): error A2070: invalid instruction operands
+         Generation.asm(146): error A2070: invalid instruction operands
+         Generation.asm(149): error A2070: invalid instruction operands
+         Generation.asm(155): error A2070: invalid instruction operands
+         Generation.asm(156): error A2070: invalid instruction operands
+         Generation.asm(159): error A2070: invalid instruction operands
+         Generation.asm(163): error A2070: invalid instruction operands
+         Generation.asm(167): error A2070: invalid instruction operands
+         Generation.asm(170): error A2070: invalid instruction operands
+         Generation.asm(176): error A2008: syntax error : main
+         Generation.asm(176): error A2088: END directive required at end of file
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm" с кодом "1".
+
+    Предупреждений: 0
+    Ошибок: 45
+
+Прошло времени 00:00:00.99

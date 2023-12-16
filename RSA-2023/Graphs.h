@@ -1,6 +1,6 @@
 #pragma once
 #include "FST.h"
-#define N_GRAPHS 19
+#define N_GRAPHS 20
 
 
 // графы переходов 
@@ -192,11 +192,12 @@
 
 
 #define GRAPH_CYCLE 6, \
-	FST::NODE(1, FST::RELATION('c', 1)),\
-	FST::NODE(1, FST::RELATION('y', 2)),\
-	FST::NODE(1, FST::RELATION('c', 3)),\
-	FST::NODE(1, FST::RELATION('l', 4)),\
-	FST::NODE(1, FST::RELATION('e', 5)),\
+	FST::NODE(1, FST::RELATION('r', 1)),\
+	FST::NODE(1, FST::RELATION('e', 2)),\
+	FST::NODE(1, FST::RELATION('p', 3)),\
+	FST::NODE(1, FST::RELATION('e', 4)),\
+	FST::NODE(1, FST::RELATION('a', 5)),\
+	FST::NODE(1, FST::RELATION('t', 5)),\
 	FST::NODE()
 
 
@@ -208,7 +209,6 @@
 	FST::NODE(1, FST::RELATION('e', 5)),\
 	FST::NODE()
 
-
 #define GRAPH_NEWLINE 8, \
 	FST::NODE(1, FST::RELATION('n', 1)),\
 	FST::NODE(1, FST::RELATION('e', 2)),\
@@ -217,6 +217,19 @@
 	FST::NODE(1, FST::RELATION('i', 5)),\
 	FST::NODE(1, FST::RELATION('n', 6)),\
 	FST::NODE(1, FST::RELATION('e', 7)),\
+	FST::NODE()
+
+
+#define GRAPH_WRITELINE 10, \
+	FST::NODE(1, FST::RELATION('w', 1)),\
+	FST::NODE(1, FST::RELATION('r', 2)),\
+	FST::NODE(1, FST::RELATION('i', 3)),\
+	FST::NODE(1, FST::RELATION('t', 4)),\
+	FST::NODE(1, FST::RELATION('e', 5)),\
+	FST::NODE(1, FST::RELATION('l', 6)),\
+	FST::NODE(1, FST::RELATION('i', 7)),\
+	FST::NODE(1, FST::RELATION('n', 8)),\
+	FST::NODE(1, FST::RELATION('e', 9)),\
 	FST::NODE()
 
 

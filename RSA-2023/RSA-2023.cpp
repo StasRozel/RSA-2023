@@ -86,6 +86,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		Log::writeLine(&std::cout, ALLGOOD, "");								// в протокол и в консось
 		Log::Close(log);													    // закрыть протокол
 
+		system("Generation.exe");
 	}
 
 
@@ -93,6 +94,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		Log::writeError(log.stream, e);											// обработка исключений
 	}
+
+
 }
 
 

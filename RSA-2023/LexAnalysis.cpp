@@ -30,6 +30,7 @@ namespace Lexer
 		{ LEX_SCRIPT, FST::FST(GRAPH_SCRIPT) },
 		{ LEX_RETURN, FST::FST(GRAPH_RETURN) },
 		{ LEX_WRITE, FST::FST(GRAPH_WRITE) },
+		{ LEX_WRITELINE, FST::FST(GRAPH_WRITELINE) },
 		{ LEX_NEWLINE, FST::FST(GRAPH_NEWLINE) },
 		{ LEX_CONDITION, FST::FST(GRAPH_CONDITION) },
 		{ LEX_CYCLE, FST::FST(GRAPH_CYCLE) },
@@ -238,7 +239,7 @@ namespace Lexer
 		int i = tables.lextable.size;	 // индекс в “Ћ текущего идентификатора
 		if (i > 1 && itentry->idtype == IT::IDTYPE::V && tables.lextable.table[i - 2].lexema != LEX_NEW)
 		{
-			Log::writeError(log.stream, Error::GetError(304, line, 0));		// в объ€влении отсутствует ключевое слово new
+			Log::writeError(log.stream, Error::GetError(304, line, 0));		// в объ€влении отсутствует ключевое слово vareable
 			lex_ok = false;
 		}
 		if (i > 1 && itentry->idtype == IT::IDTYPE::F && tables.lextable.table[i - 1].lexema != LEX_FUNCTION)

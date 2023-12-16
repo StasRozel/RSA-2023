@@ -29,6 +29,7 @@
 #define LEX_ISFALSE		 'r'	// истинный блок
 #define LEX_CYCLE		 'c'	// цикл
 #define LEX_WRITE		 'o'	// вывод
+#define LEX_WRITELINE	'd'	// вывод
 #define LEX_NEWLINE		 '^'	// перевод строки
 #define LEX_RETURN		 'e'	// выход из скрипта/функции
 #define LEX_SCRIPT		 'p'	// ключевое слово для скрипта

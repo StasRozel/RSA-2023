@@ -1,42 +1,13 @@
-number function min(number x, number y)
-{
-	variable: number res;
-	if: x < y #
-	istrue {res = x;}
-	isfalse {res = y;} #
-	return res;
-}
-
-script function strings (string a, string b)
-{
-	variable: number k;
-	k = lenght(a) + 5;
-        write "Lenght + 10001:          ";
-	write k;
-	newline;
-
-	variable: string str;
-	str = strcopy(b);
-        write "String copy11111:         ";
-	write str;
-	newline;
-	return;
-}
-
-
 main
 {
-	variable: string strx = "RSA-2023";
-	newline;
+	variable: string strx = "RSA-2022";
 	write strx;
 	newline;
-	write strx;
-	newline;
-	variable: string stry = "Test String";
-        variable: string strz = "23";
-	strings(strx, stry);
-	newline;
-	write strx;
-	write strx;
-	newline;
+	variable: number x = 10;
+
+	if: x > 1 #
+	repeat {
+		writeline x;
+		x = x - 2;
+	} #
 }

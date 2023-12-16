@@ -1,0 +1,61 @@
+﻿Сборка начата 06.12.2023 20:11:51.
+Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" в узле 4 (целевые объекты Rebuild).
+     1>PrepareForBuild:
+         Создание каталога "x64\Debug\RSA-2023.tlog\".
+       InitializeBuildStatus:
+         Создание "x64\Debug\RSA-2023.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt "RSA-2023.cpp" Error.cpp FST.cpp Generator.cpp Greibach.cpp In.cpp Log.cpp LT.cpp MFST.cpp Parm.cpp LexAnalysis.cpp IT.cpp PolishNotation.cpp SemAnalysis.cpp
+         RSA-2023.cpp
+         Error.cpp
+         FST.cpp
+         Generator.cpp
+     1>D:\app\RSA-2023\RSA-2023\Generator.cpp(129,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+         Greibach.cpp
+         In.cpp
+         Log.cpp
+     1>D:\app\RSA-2023\RSA-2023\Log.cpp(48,12): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
+         LT.cpp
+         MFST.cpp
+         Parm.cpp
+         LexAnalysis.cpp
+         IT.cpp
+     1>D:\app\RSA-2023\RSA-2023\IT.cpp(66,45): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+         PolishNotation.cpp
+     1>D:\app\RSA-2023\RSA-2023\PolishNotation.cpp(68,18): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+         SemAnalysis.cpp
+         Создание кода...
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\app\RSA-2023\x64\Debug\RSA-2023.exe" /INCREMENTAL /ILK:"x64\Debug\RSA-2023.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\app\RSA-2023\x64\Debug\RSA-2023.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\app\RSA-2023\x64\Debug\RSA-2023.lib" /MACHINE:X64 "x64\Debug\RSA-2023.obj"
+         x64\Debug\Error.obj
+         x64\Debug\FST.obj
+         x64\Debug\Generator.obj
+         x64\Debug\Greibach.obj
+         x64\Debug\In.obj
+         x64\Debug\Log.obj
+         x64\Debug\LT.obj
+         x64\Debug\MFST.obj
+         x64\Debug\Parm.obj
+         x64\Debug\LexAnalysis.obj
+         x64\Debug\IT.obj
+         x64\Debug\PolishNotation.obj
+         x64\Debug\SemAnalysis.obj
+         RSA-2023.vcxproj -> D:\app\RSA-2023\x64\Debug\RSA-2023.exe
+       FinalizeBuildStatus:
+         Файл "x64\Debug\RSA-2023.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "x64\Debug\RSA-2023.tlog\RSA-2023.lastbuildstate".
+     1>Сборка проекта "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+       "D:\app\RSA-2023\RSA-2023\RSA-2023.vcxproj" (целевой объект Rebuild ) (1) ->
+       (Целевой объект ClCompile) -> 
+         D:\app\RSA-2023\RSA-2023\Generator.cpp(129,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+         D:\app\RSA-2023\RSA-2023\Log.cpp(48,12): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
+         D:\app\RSA-2023\RSA-2023\IT.cpp(66,45): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+         D:\app\RSA-2023\RSA-2023\PolishNotation.cpp(68,18): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+
+    Предупреждений: 4
+    Ошибок: 0
+
+Прошло времени 00:00:24.12

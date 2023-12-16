@@ -1,29 +1,21 @@
-﻿Сборка начата 06.12.2023 19:48:13.
-Уровень детализации журнала: Normal.     1>Проект "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Rebuild).
-     1>_PrepareForClean:
-         Файл "Debug\Generation.tlog\Generation.lastbuildstate" удаляется.
-       InitializeBuildStatus:
+﻿Сборка начата 17.12.2023 0:15:49.
+Уровень детализации журнала: Normal.     1>Проект "E:\Универ\2 курс\Курсач КПО\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
          Создание "Debug\Generation.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
        _MASM:
          Assembling Generation.asm...
-         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmpaa889f24a7fd4b8c8f08bbfff117dd0c.cmd"
+         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmp096930e068c44108a7d50ede36dc99b2.cmd"
          ml.exe /c /nologo /Zi /Fo"Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm
        Link:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\app\RSA-2023\Debug\Generation.exe" /INCREMENTAL /ILK:"Debug\Generation.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\app\RSA-2023\Debug\Generation.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\app\RSA-2023\Debug\Generation.lib" /MACHINE:X86 Debug\Generation.obj
-     1>LINK : warning LNK4098: библиотека по умолчанию "libucrt.lib" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
-         Generation.vcxproj -> D:\app\RSA-2023\Debug\Generation.exe
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.exe" /INCREMENTAL /ILK:"Debug\Generation.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.lib" /MACHINE:X86 Debug\Generation.obj
+         Generation.vcxproj -> E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.exe
        FinalizeBuildStatus:
          Файл "Debug\Generation.tlog\unsuccessfulbuild" удаляется.
          Обращение к "Debug\Generation.tlog\Generation.lastbuildstate".
-     1>Сборка проекта "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" завершена (целевые объекты Rebuild).
+     1>Сборка проекта "E:\Универ\2 курс\Курсач КПО\RSA-2023\Generation\Generation\Generation.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
-
-       "D:\app\RSA-2023\Generation\Generation\Generation.vcxproj" (целевой объект Rebuild ) (1) ->
-       (Целевой объект Link) -> 
-         LINK : warning LNK4098: библиотека по умолчанию "libucrt.lib" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
-
-    Предупреждений: 1
+    Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:04.60
+Прошло времени 00:00:02.23
