@@ -23,7 +23,8 @@
 "\n outstr PROTO : DWORD\n"\
 "\n strcopy PROTO : DWORD, : DWORD\n"\
 "\n lenght PROTO : DWORD, : DWORD\n"\
-"\n atoii  PROTO : DWORD,  : DWORD\n"
+"\n atoii  PROTO : DWORD,  : DWORD\n"\
+"\n strcomp  PROTO : DWORD,  : DWORD\n"
 
 
 #define ITENTRY(x)  tables.idtable.table[tables.lextable.table[x].idxTI]

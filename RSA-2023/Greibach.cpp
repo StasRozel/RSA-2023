@@ -98,8 +98,9 @@ namespace GRB	// грамматика Грейбах
 			Rule::Chain(4, TS('i'), NS('F'), NS('A'), NS('W'))
 		),
 
-		Rule(NS('K'), GRB_ERROR_SERIES + 14, 15,				// Недопустимая синтаксическая конструкция
+		Rule(NS('K'), GRB_ERROR_SERIES + 14, 16,				// Недопустимая синтаксическая конструкция
 			Rule::Chain(7, TS('n'), TS('t'), TS('i'), TS('='), NS('V'), TS(';'), NS('K')),	// декларация + присваивание
+			Rule::Chain(7, TS('n'), TS('t'), TS('i'), TS('='), NS('W'), TS(';'), NS('K')),	// декларация + присваивание
 			Rule::Chain(5, TS('n'), TS('t'), TS('i'), TS(';'), NS('K')),	// декларация
 			Rule::Chain(5, TS('i'), TS('='), NS('W'), TS(';'), NS('K')),	// присваивание
 

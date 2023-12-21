@@ -4,12 +4,13 @@
 #define MAXSIZE_ID	8						// максимальное число символов идентификатора
 #define SCOPED_ID_MAXSIZE   MAXSIZE_ID*2	// максимальное число символов идентификатор + область видимости
 #define MAXSIZE_TI	4096					// максимальное число количество строк в таблице идентификаторов
+#define MAXSIZE_ID_STR 254
 #define NUM_DEFAULT	0x00000000				// значение по умолчанию для int
 #define STR_DEFAULT	0x00					// значение по умолчанию для sting
 #define NULLIDX_TI	0xffffffff				// нет элемента таблицы идентификаторов
 #define STR_MAXSIZE	255						// максимальная длина строкового литерала
-#define NUM_MAXSIZE 255						// максимальное значение для типа number
-#define NUM_MINSIZE -256					// минимальное значение для типа number
+#define NUM_MAXSIZE INT32_MAX					// максимальное значение для типа number
+#define NUM_MINSIZE INT32_MIN				// минимальное значение для типа number
 #define MAX_PARAMS_COUNT 3					// максимальное количество параметров у функции
 #define STRCOPY_PARAMS_CNT 1				// кол-во параметров у функции strcopy
 #define LENGHT_PARAMS_CNT 1					// кол-во параметров у функции lenght

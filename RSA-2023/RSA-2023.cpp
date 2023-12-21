@@ -21,9 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		in.words = In::getWordsTable(log.stream, in.text, in.code, in.size);	// разобрать на токены
 		Lexer::LEX tables;														// создать таблицу лексем
 		bool lex_ok = Lexer::analyze(tables, in, log, parm);					// выполнить Ћ≈ —»„≈— »… анализ
-		LT::writeLexTable(log.stream, tables.lextable);							// записать в протокол таблицу лексем
-		IT::writeIdTable(log.stream, tables.idtable);							// и таблицу идентификаторов
-		LT::writeLexemsOnLines(log.stream, tables.lextable);					// и соответствие лексем исходному коду
+		
 		if (!lex_ok)
 		{
 			Log::writeLine(log.stream, LEXERROR, "");
@@ -37,8 +35,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		MFST_TRACE_START(log.stream);
 		MFST::Mfst mfst(tables, GRB::getGreibach());							// выполнить —»Ќ“ј —»„≈— »… анализ
 		bool synt_ok = mfst.start(log);
-		mfst.savededucation();
-		mfst.printrules(log);													// вывести дерево разбора
+		
 		if (!synt_ok)
 		{
 			Log::writeLine(log.stream, SYNTERROR, "");
@@ -69,7 +66,12 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		else Log::writeLine(&std::cout, POLISHGOOD, "");						// успешна€ запись в протокол
 
+		LT::writeLexTable(log.stream, tables.lextable);							// записать в протокол таблицу лексем
+		IT::writeIdTable(log.stream, tables.idtable);							// и таблицу идентификаторов
+		LT::writeLexemsOnLines(log.stream, tables.lextable);					// и соответствие лексем исходному коду
 
+		mfst.savededucation();
+		mfst.printrules(log);													// вывести дерево разбора
 
 		Log::writeLine(log.stream, MESSAGE, "");								// запись в протокол после преобразовани€ выражений
 		LT::writeLexTable(log.stream, tables.lextable);							// записать таблицу лексем
@@ -86,13 +88,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		Log::writeLine(&std::cout, ALLGOOD, "");								// в протокол и в консось
 		Log::Close(log);													    // закрыть протокол
 
-		system("Generation.exe");
+		system("E:\\”нивер\\2_курс\\ урсач_ ѕќ\\RSA-2023\\Debug\\Generation.exe");
 	}
 
 
 	catch (Error::ERROR e)
 	{
-		Log::writeError(log.stream, e);											// обработка исключений
+		Log::writeError(log.stream, e);			
 	}
 
 

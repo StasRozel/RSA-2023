@@ -1,21 +1,19 @@
-﻿Сборка начата 17.12.2023 0:15:49.
-Уровень детализации журнала: Normal.     1>Проект "E:\Универ\2 курс\Курсач КПО\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 21.12.2023 21:17:05.
+Уровень детализации журнала: Normal.     1>Проект "E:\Универ\2_курс\Курсач_КПО\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Build).
      1>InitializeBuildStatus:
-         Создание "Debug\Generation.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\Generation.tlog\unsuccessfulbuild".
        _MASM:
-         Assembling Generation.asm...
-         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmp096930e068c44108a7d50ede36dc99b2.cmd"
-         ml.exe /c /nologo /Zi /Fo"Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm
+       Целевой объект "_MASM" пропускается, так как все выходные файлы актуальны по отношению к входным.
        Link:
-         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.exe" /INCREMENTAL /ILK:"Debug\Generation.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.lib" /MACHINE:X86 Debug\Generation.obj
-         Generation.vcxproj -> E:\Универ\2 курс\Курсач КПО\RSA-2023\Debug\Generation.exe
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.exe" /INCREMENTAL /ILK:"Debug\Generation.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.lib" /MACHINE:X86 Debug\Generation.obj
+         Generation.vcxproj -> E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.exe
        FinalizeBuildStatus:
          Файл "Debug\Generation.tlog\unsuccessfulbuild" удаляется.
          Обращение к "Debug\Generation.tlog\Generation.lastbuildstate".
-     1>Сборка проекта "E:\Универ\2 курс\Курсач КПО\RSA-2023\Generation\Generation\Generation.vcxproj" завершена (целевые объекты Build).
+     1>Сборка проекта "E:\Универ\2_курс\Курсач_КПО\RSA-2023\Generation\Generation\Generation.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:02.23
+Прошло времени 00:00:00.41

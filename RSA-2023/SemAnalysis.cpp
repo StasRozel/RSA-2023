@@ -21,6 +21,7 @@ namespace Semantic
 				{
 					sem_ok = false;
 					Log::writeError(log.stream, Error::GetError(303, tables.lextable.table[i].sn, 0));
+					Log::writeError(&std::cout, Error::GetError(303, tables.lextable.table[i].sn, 0));
 				}
 			}
 			case LEX_DIRSLASH:
@@ -38,6 +39,7 @@ namespace Semantic
 								{
 									sem_ok = false;			// деление на нуль
 									Log::writeError(log.stream, Error::GetError(318, tables.lextable.table[k].sn, 0));
+									Log::writeError(&std::cout, Error::GetError(318, tables.lextable.table[k].sn, 0));
 								}
 							}
 						}
@@ -49,6 +51,7 @@ namespace Semantic
 					{
 						sem_ok = false;
 						Log::writeError(log.stream, Error::GetError(318, tables.lextable.table[k].sn, 0));
+						Log::writeError(&std::cout, Error::GetError(318, tables.lextable.table[k].sn, 0));
 					}
 				}
 				break;
@@ -72,6 +75,7 @@ namespace Semantic
 								if (lefttype != righttype)	// типы данных в выражении не совпадают
 								{
 									Log::writeError(log.stream, Error::GetError(314, tables.lextable.table[k].sn, 0));
+									Log::writeError(&std::cout, Error::GetError(314, tables.lextable.table[k].sn, 0));
 									sem_ok = false;
 									break;
 								}
@@ -96,6 +100,7 @@ namespace Semantic
 							if (l == LEX_PLUS || l == LEX_MINUS || l == LEX_STAR)	// выражениу rvalue недопустимо
 							{
 								Log::writeError(log.stream, Error::GetError(316, tables.lextable.table[k].sn, 0));
+								Log::writeError(&std::cout, Error::GetError(316, tables.lextable.table[k].sn, 0));
 								sem_ok = false;
 								break;
 							}
@@ -123,6 +128,7 @@ namespace Semantic
 									if (tables.idtable.table[next].iddatatype != e.iddatatype)
 									{					// тип функции и возвращаемого значения не совпадают
 										Log::writeError(log.stream, Error::GetError(315, tables.lextable.table[k].sn, 0));
+										Log::writeError(&std::cout, Error::GetError(315, tables.lextable.table[k].sn, 0));
 										sem_ok = false;
 										break;
 									}
@@ -151,6 +157,7 @@ namespace Semantic
 								if (ctype != e.value.params.types[paramscount - 1])
 								{					// несовпадение типов передаваемых параметров
 									Log::writeError(log.stream, Error::GetError(309, tables.lextable.table[i].sn, 0));
+									Log::writeError(&std::cout, Error::GetError(309, tables.lextable.table[i].sn, 0));
 									sem_ok = false;
 									break;
 								}
@@ -161,11 +168,13 @@ namespace Semantic
 						if (paramscount != e.value.params.count)
 						{			// количество передаваемых и принимаемых параметров не совпадает
 							Log::writeError(log.stream, Error::GetError(308, tables.lextable.table[i].sn, 0));
+							Log::writeError(&std::cout, Error::GetError(308, tables.lextable.table[i].sn, 0));
 							sem_ok = false;
 						}
 						if (paramscount > 3)
 						{					// слишком много параметров в вызове
 							Log::writeError(log.stream, Error::GetError(307, tables.lextable.table[i].sn, 0));
+							Log::writeError(&std::cout, Error::GetError(307, tables.lextable.table[i].sn, 0));
 							sem_ok = false;
 						}
 					}
@@ -188,6 +197,7 @@ namespace Semantic
 				if (!flag)
 				{			// строка или неизвестный идентификатор в условии
 					Log::writeError(log.stream, Error::GetError(317, tables.lextable.table[i].sn, 0));
+					Log::writeError(&std::cout, Error::GetError(317, tables.lextable.table[i].sn, 0));
 					sem_ok = false;
 				}
 				break;

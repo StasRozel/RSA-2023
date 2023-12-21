@@ -1,6 +1,24 @@
 #pragma once
 #include "FST.h"
+
 #define N_GRAPHS 20
+
+/*FST::RELATION('а', 1), FST::RELATION('б', 1), FST::RELATION('в', 1), FST::RELATION('г', 1),\
+			FST::RELATION('д', 1), FST::RELATION('е', 1), FST::RELATION('ж', 1), FST::RELATION('з', 1),\
+			FST::RELATION('и', 1), FST::RELATION('й', 1), FST::RELATION('к', 1), FST::RELATION('л', 1),\
+			FST::RELATION('м', 1), FST::RELATION('н', 1), FST::RELATION('о', 1), FST::RELATION('п', 1),\
+			FST::RELATION('р', 1), FST::RELATION('с', 1), FST::RELATION('т', 1), FST::RELATION('у', 1),\
+			FST::RELATION('ф', 1), FST::RELATION('х', 1), FST::RELATION('ч', 1), FST::RELATION('ц', 1),\
+			FST::RELATION('ш', 1), FST::RELATION('щ', 1),FST::RELATION('ъ', 1), FST::RELATION('ы', 1),\
+			FST::RELATION('ь', 1), FST::RELATION('э', 1), FST::RELATION('ю', 1), FST::RELATION('я', 1),\
+			FST::RELATION('А', 1), FST::RELATION('Б', 1), FST::RELATION('В', 1), FST::RELATION('Г', 1),\
+			FST::RELATION('Д', 1), FST::RELATION('Е', 1), FST::RELATION('Ж', 1), FST::RELATION('З', 1),\
+			FST::RELATION('И', 1), FST::RELATION('Й', 1), FST::RELATION('К', 1), FST::RELATION('Л', 1),\
+			FST::RELATION('М', 1), FST::RELATION('Н', 1), FST::RELATION('О', 1), FST::RELATION('П', 1),\
+			FST::RELATION('Р', 1), FST::RELATION('С', 1), FST::RELATION('Т', 1), FST::RELATION('О', 1),\
+			FST::RELATION('Ф', 1), FST::RELATION('Х', 1), FST::RELATION('Ч', 1), FST::RELATION('Ц', 1),\
+			FST::RELATION('Ш', 1), FST::RELATION('Щ', 1),FST::RELATION('Ъ', 1), FST::RELATION('Ы', 1),\
+			FST::RELATION('Ь', 1), FST::RELATION('Э', 1), FST::RELATION('Ю', 1), FST::RELATION('Я', 1), \*/
 
 
 // графы переходов 
@@ -49,7 +67,7 @@
 
 #define GRAPH_STRING_LITERAL 3,\
 	FST::NODE(1, FST::RELATION('\"', 1)),\
-	FST::NODE(87, \
+	FST::NODE(154, \
 			FST::RELATION('a', 1), FST::RELATION('b', 1), FST::RELATION('c', 1), FST::RELATION('d', 1),\
 			FST::RELATION('e', 1), FST::RELATION('f', 1), FST::RELATION('g', 1), FST::RELATION('h', 1),\
 			FST::RELATION('i', 1), FST::RELATION('j', 1), FST::RELATION('k', 1), FST::RELATION('l', 1),\
@@ -64,6 +82,22 @@
 			FST::RELATION('Q', 1), FST::RELATION('R', 1), FST::RELATION('S', 1), FST::RELATION('T', 1),\
 			FST::RELATION('U', 1), FST::RELATION('V', 1), FST::RELATION('W', 1), FST::RELATION('X', 1),\
 			FST::RELATION('Y', 1), FST::RELATION('Z', 1),\
+			FST::RELATION('a', 1), FST::RELATION('б', 1), FST::RELATION('в', 1), FST::RELATION('г', 1),\
+			FST::RELATION('д', 1), FST::RELATION('е', 1), FST::RELATION('ж', 1), FST::RELATION('з', 1),\
+			FST::RELATION('и', 1), FST::RELATION('й', 1), FST::RELATION('к', 1), FST::RELATION('л', 1),\
+			FST::RELATION('м', 1), FST::RELATION('н', 1), FST::RELATION('о', 1), FST::RELATION('п', 1),\
+			FST::RELATION('р', 1), FST::RELATION('с', 1), FST::RELATION('т', 1), FST::RELATION('у', 1),\
+			FST::RELATION('ф', 1), FST::RELATION('х', 1), FST::RELATION('ч', 1), FST::RELATION('ц', 1),\
+			FST::RELATION('ш', 1), FST::RELATION('щ', 1),FST::RELATION('ъ', 1), FST::RELATION('ы', 1),\
+			FST::RELATION('ь', 1), FST::RELATION('э', 1), FST::RELATION('ю', 1), FST::RELATION('я', 1),\
+			FST::RELATION('А', 1), FST::RELATION('Б', 1), FST::RELATION('В', 1), FST::RELATION('Г', 1),\
+			FST::RELATION('Д', 1), FST::RELATION('Е', 1), FST::RELATION('Ж', 1), FST::RELATION('З', 1),\
+			FST::RELATION('И', 1), FST::RELATION('Й', 1), FST::RELATION('К', 1), FST::RELATION('Л', 1),\
+			FST::RELATION('М', 1), FST::RELATION('Н', 1), FST::RELATION('О', 1), FST::RELATION('П', 1),\
+			FST::RELATION('Р', 1), FST::RELATION('С', 1), FST::RELATION('Т', 1), FST::RELATION('О', 1),\
+			FST::RELATION('Ф', 1), FST::RELATION('Х', 1), FST::RELATION('Ч', 1), FST::RELATION('Ц', 1),\
+			FST::RELATION('Ш', 1), FST::RELATION('Щ', 1),FST::RELATION('Ъ', 1), FST::RELATION('Ы', 1),\
+			FST::RELATION('Ь', 1), FST::RELATION('Э', 1), FST::RELATION('Ю', 1), FST::RELATION('Я', 1), \
 			FST::RELATION('0', 1), FST::RELATION('1', 1), FST::RELATION('2', 1), FST::RELATION('3', 1),\
 			FST::RELATION('4', 1), FST::RELATION('5', 1), FST::RELATION('6', 1), FST::RELATION('7', 1),\
 			FST::RELATION('8', 1), FST::RELATION('9', 1),\

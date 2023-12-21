@@ -166,11 +166,13 @@ namespace Lexer
 			if (!int_ok)
 			{
 				Log::writeError(log.stream, Error::GetError(313, line, 0));		// превышен максимальный размер числового литерала
+				Log::writeError(&std::cout, Error::GetError(313, line, 0));		// превышен максимальный размер числового литерала
 				lex_ok = false;
 			}
 			if (itentry->iddatatype == IT::IDDATATYPE::STR && itentry->value.vstr.len == 0)
 			{
 				Log::writeError(log.stream, Error::GetError(310, line, 0));		// пустой строковый литерал
+				Log::writeError(&std::cout, Error::GetError(310, line, 0));		// пустой строковый литерал
 				lex_ok = false;
 			}
 			strcpy_s(itentry->id, getNextLiteralName());
@@ -239,17 +241,20 @@ namespace Lexer
 		int i = tables.lextable.size;	 // индекс в “Ћ текущего идентификатора
 		if (i > 1 && itentry->idtype == IT::IDTYPE::V && tables.lextable.table[i - 2].lexema != LEX_NEW)
 		{
-			Log::writeError(log.stream, Error::GetError(304, line, 0));		// в объ€влении отсутствует ключевое слово vareable
+			Log::writeError(log.stream, Error::GetError(304, line, 0));		// в объ€влении отсутствует ключевое слово variable
+			Log::writeError(&std::cout, Error::GetError(304, line, 0));		// в объ€влении отсутствует ключевое слово variable
 			lex_ok = false;
 		}
 		if (i > 1 && itentry->idtype == IT::IDTYPE::F && tables.lextable.table[i - 1].lexema != LEX_FUNCTION)
 		{
 			Log::writeError(log.stream, Error::GetError(303, line, 0));		// в объ€влении не указан тип функции
+			Log::writeError(&std::cout, Error::GetError(303, line, 0));		// в объ€влении не указан тип функции
 			lex_ok = false;
 		}
 		if (itentry->iddatatype == IT::IDDATATYPE::UNDEF)
 		{
 			Log::writeError(log.stream, Error::GetError(300, line, 0));		// невозможно определелить тип
+			Log::writeError(&std::cout, Error::GetError(300, line, 0));		// невозможно определелить тип
 			lex_ok = false;
 		}
 
@@ -272,8 +277,17 @@ namespace Lexer
 		{
 			strcpy_s(curword, in.words[i].word);
 			if (i < In::InWord::size - 1)
-				strcpy_s(nextword, in.words[i + 1].word);
+				if (strlen(in.words[i + 1].word) > MAXSIZE_ID_STR) {
+					Log::writeError(&std::cout, Error::GetError(204, in.words[i].line, 0));
+					lex_ok = false;
+					return lex_ok;
+				}
+				else {
+					strcpy_s(nextword, in.words[i + 1].word);
+				}
+				
 			curline = in.words[i].line;		// берем исходную строку из структуры
+
 			isFunc = false;
 			int idxTI = NULLIDX_TI;
 
@@ -352,6 +366,8 @@ namespace Lexer
 							strcpy_s(id, curword);	// литерал замен€етс€ своим значением
 
 						IT::Entry* itentry = getEntry(tables, lexema, id, idtype, isParam, isFunc, log, curline, lex_ok);
+	
+
 						if (itentry != nullptr)		// перва€ встреча - объ€вление
 						{
 							if (isFunc)		// если функци€ - сохранить список параметров
@@ -369,6 +385,7 @@ namespace Lexer
 											if (itentry->value.params.count >= MAX_PARAMS_COUNT)
 											{
 												Log::writeError(log.stream, Error::GetError(306, curline, 0));
+												Log::writeError(&std::cout, Error::GetError(306, curline, 0));
 												lex_ok = false;
 												break;
 											}
@@ -377,7 +394,9 @@ namespace Lexer
 									}
 								}
 							}
+
 							IT::Add(tables.idtable, *itentry);
+							
 							idxTI = tables.idtable.size - 1;
 						}
 						else     // повторный идентификатор
@@ -390,6 +409,7 @@ namespace Lexer
 								|| tables.lextable.table[i - 1].lexema == LEX_LITERAL_NUMO)
 							{
 								Log::writeError(log.stream, Error::GetError(305, curline, 0));
+								Log::writeError(&std::cout, Error::GetError(305, curline, 0));
 								lex_ok = false;
 							}
 							idxTI = IT::isId(tables.idtable, id);	// индекс существующего идентификатора
@@ -399,7 +419,6 @@ namespace Lexer
 					}
 					break;
 					}
-
 					LT::Entry* ltentry = new LT::Entry(lexema, curline, idxTI);
 					LT::Add(tables.lextable, *ltentry);			// каждую лексему добавл€ем в таблицу лексем
 					break;
@@ -407,6 +426,7 @@ namespace Lexer
 				else if (j == N_GRAPHS - 1)		 // ошибка лексического анализатора: цепочка не распознана
 				{
 					Log::writeError(log.stream, Error::GetError(201, curline, 0));
+					Log::writeError(&std::cout, Error::GetError(201, curline, 0));
 					lex_ok = false;
 				}
 			}
@@ -415,11 +435,13 @@ namespace Lexer
 		if (enterPoint == NULL)		// не найдена точка входа
 		{
 			Log::writeError(log.stream, Error::GetError(301));
+			Log::writeError(&std::cout, Error::GetError(301));
 			lex_ok = false;
 		}
 		if (enterPoint > 1)		//больше одной точки входа
 		{
 			Log::writeError(log.stream, Error::GetError(302));
+			Log::writeError(&std::cout, Error::GetError(302));
 			lex_ok = false;
 		}
 		return lex_ok;

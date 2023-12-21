@@ -12,6 +12,7 @@ using namespace std;
 
 namespace Gener		// генерация кода в assembler
 {
+
 	static int conditionnum = 0;
 
 	string itoS(int x) { stringstream r;  r << x;  return r.str(); }	// int в string
@@ -237,7 +238,7 @@ namespace Gener		// генерация кода в assembler
 			{
 			case LEX_MAIN:		// вход в main
 			{
-				str = str + SEPSTR("MAIN") + "main PROC";
+				str = str + SEPSTR("MAIN") + "main PROC\n";
 				break;
 			}
 			case LEX_FUNCTION:	// вызов функции и передача параметров

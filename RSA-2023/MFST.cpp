@@ -1,6 +1,7 @@
 
 #include "pch.h"
 #include "Header.h"
+#include "string"
 
 int FST_TRACE_n = -1;
 
@@ -52,7 +53,12 @@ namespace MFST
 		grebach = pgrebach; // Грейбах
 		lex = plex;		// рез работы лекс анализатора
 		lenta = new short[lenta_size = lex.lextable.size];	// размер ленты = текущий размер таблицы лексем
-		for (int k = 0; k < lenta_size; k++)lenta[k] = TS(lex.lextable.table[k].lexema);	// заносит в ленту терминалы
+
+		for (int k = 0; k < lenta_size; k++) {
+			
+				lenta[k] = TS(lex.lextable.table[k].lexema);
+			
+		}// заносит в ленту терминалы
 		lenta_position = 0;
 		st.push(grebach.stbottomT);		// добавляет дно стека
 		st.push(grebach.startN);		// добавляет стартовый символ

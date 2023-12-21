@@ -1,13 +1,8 @@
+number function null() {
+	return 0;
+}
+
 main
 {
-	variable: string strx = "RSA-2022";
-	write strx;
-	newline;
-	variable: number x = 10;
-
-	if: x > 1 #
-	repeat {
-		writeline x;
-		x = x - 2;
-	} #
+	write "Привет мир!";
 }
