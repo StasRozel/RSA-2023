@@ -11,6 +11,7 @@
 #define TYPE_SCRIPT		"script"
 #define STRCOPY			"strcopy"
 #define ATOII			"atoii"
+#define STRCOMP			"strcomp"
 #define MAIN			"main"
 #define LENGHT			"lenght"
 

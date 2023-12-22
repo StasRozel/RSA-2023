@@ -3,8 +3,10 @@ main {
 	variable: string str = "1";
 	variable: string strw = "Hello123";
 
-	write "Привет Мир!";
+	writeline "Привет Мир!";
 
 	variable: number len;
-	len = atoii(str);
+	len = strcomp(str, strw);
+
+	write len;
 }

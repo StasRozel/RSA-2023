@@ -17,7 +17,7 @@ ExitProcess PROTO:DWORD
 
  atoii  PROTO : DWORD,  : DWORD
 
- strcomp  PROTO : DWORD,  : DWORD
+ strcomp  PROTO : DWORD,  : DWORD, : DWORD
 
 .const
 		newline byte 13, 10, 0
@@ -41,14 +41,22 @@ mov mainstrw, offset LTRL2
 push offset LTRL3
 call outstr
 
+push offset newline
+call outstr
 
+
+push mainstrw
 push mainstr
 push offset buffer
-call atoii
+call strcomp
 push eax
 
 pop ebx
 mov mainlen, ebx
+
+
+push mainlen
+call outnum
 
 push 0
 call ExitProcess

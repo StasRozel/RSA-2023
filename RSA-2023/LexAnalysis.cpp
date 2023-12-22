@@ -123,6 +123,8 @@ namespace Lexer
 			return IT::STDFNC::F_LENGHT;
 		if (!strcmp(ATOII, id))
 			return IT::STDFNC::F_ATOII;
+		if (!strcmp(STRCOMP, id))
+			return IT::STDFNC::F_STRCOMP;
 		return IT::STDFNC::F_NOT_STD;
 	}
 
@@ -223,6 +225,16 @@ namespace Lexer
 					itentry->value.params.types = new IT::IDDATATYPE[ATOII_PARAMS_CNT];
 					for (int k = 0; k < ATOII_PARAMS_CNT; k++)
 						itentry->value.params.types[k] = IT::ATOII_PARAMS[k];
+					break;
+				}
+				case IT::STDFNC::F_STRCOMP:
+				{
+					itentry->idtype = IT::IDTYPE::S;
+					itentry->iddatatype = STRCOMP_TYPE;
+					itentry->value.params.count = STRCOMP_PARAMS_CNT;
+					itentry->value.params.types = new IT::IDDATATYPE[STRCOMP_PARAMS_CNT];
+					for (int k = 0; k < STRCOMP_PARAMS_CNT; k++)
+						itentry->value.params.types[k] = IT::STRCOMP_PARAMS[k];
 					break;
 				}
 				case IT::STDFNC::F_NOT_STD:

@@ -4,5 +4,12 @@ number function null() {
 
 main
 {
+
+	variable: string strx = "123";
+	variable: string stry = "456";
+
+	variable: number x;
+	x = strcomp(strx, stry);
+
 	write "Привет мир!";
 }

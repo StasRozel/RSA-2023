@@ -1,6 +1,6 @@
 
 ================================  Протокол работы  ================================
-===========================  Дата: 22.12.2023 04:05:54  ===========================
+===========================  Дата: 22.12.2023 05:20:30  ===========================
 
 
 ================  Параметры  ================
@@ -8,116 +8,140 @@
 -out: example.txt.asm
 -log: example.txt.log
 =============  Исходные данные  =============
-Количество символов: 142
+Количество символов: 167
 Проигнорировано:   0
-Количество строк:  10
+Количество строк:  12
 
 Шаг : Правило             Входная лента                 Стек                
-0   : S->m{K}             m{nti=l;nti=l;ol;nti;i=i(     S$                  
+0   : S->m{K}             m{nti=l;nti=l;dl;nti;i=i(     S$                  
 1   : SAVESTATE:          1
-1   :                     m{nti=l;nti=l;ol;nti;i=i(     m{K}$               
-2   :                     {nti=l;nti=l;ol;nti;i=i(i     {K}$                
-3   :                     nti=l;nti=l;ol;nti;i=i(i)     K}$                 
-4   : K->nti=V;K          nti=l;nti=l;ol;nti;i=i(i)     K}$                 
+1   :                     m{nti=l;nti=l;dl;nti;i=i(     m{K}$               
+2   :                     {nti=l;nti=l;dl;nti;i=i(i     {K}$                
+3   :                     nti=l;nti=l;dl;nti;i=i(i,     K}$                 
+4   : K->nti=V;K          nti=l;nti=l;dl;nti;i=i(i,     K}$                 
 5   : SAVESTATE:          2
-5   :                     nti=l;nti=l;ol;nti;i=i(i)     nti=V;K}$           
-6   :                     ti=l;nti=l;ol;nti;i=i(i);     ti=V;K}$            
-7   :                     i=l;nti=l;ol;nti;i=i(i);      i=V;K}$             
-8   :                     =l;nti=l;ol;nti;i=i(i);       =V;K}$              
-9   :                     l;nti=l;ol;nti;i=i(i);        V;K}$               
-10  : V->l                l;nti=l;ol;nti;i=i(i);        V;K}$               
+5   :                     nti=l;nti=l;dl;nti;i=i(i,     nti=V;K}$           
+6   :                     ti=l;nti=l;dl;nti;i=i(i,i     ti=V;K}$            
+7   :                     i=l;nti=l;dl;nti;i=i(i,i)     i=V;K}$             
+8   :                     =l;nti=l;dl;nti;i=i(i,i);     =V;K}$              
+9   :                     l;nti=l;dl;nti;i=i(i,i);o     V;K}$               
+10  : V->l                l;nti=l;dl;nti;i=i(i,i);o     V;K}$               
 11  : SAVESTATE:          3
-11  :                     l;nti=l;ol;nti;i=i(i);        l;K}$               
-12  :                     ;nti=l;ol;nti;i=i(i);         ;K}$                
-13  :                     nti=l;ol;nti;i=i(i);          K}$                 
-14  : K->nti=V;K          nti=l;ol;nti;i=i(i);          K}$                 
+11  :                     l;nti=l;dl;nti;i=i(i,i);o     l;K}$               
+12  :                     ;nti=l;dl;nti;i=i(i,i);oi     ;K}$                
+13  :                     nti=l;dl;nti;i=i(i,i);oi;     K}$                 
+14  : K->nti=V;K          nti=l;dl;nti;i=i(i,i);oi;     K}$                 
 15  : SAVESTATE:          4
-15  :                     nti=l;ol;nti;i=i(i);          nti=V;K}$           
-16  :                     ti=l;ol;nti;i=i(i);           ti=V;K}$            
-17  :                     i=l;ol;nti;i=i(i);            i=V;K}$             
-18  :                     =l;ol;nti;i=i(i);             =V;K}$              
-19  :                     l;ol;nti;i=i(i);              V;K}$               
-20  : V->l                l;ol;nti;i=i(i);              V;K}$               
+15  :                     nti=l;dl;nti;i=i(i,i);oi;     nti=V;K}$           
+16  :                     ti=l;dl;nti;i=i(i,i);oi;      ti=V;K}$            
+17  :                     i=l;dl;nti;i=i(i,i);oi;       i=V;K}$             
+18  :                     =l;dl;nti;i=i(i,i);oi;        =V;K}$              
+19  :                     l;dl;nti;i=i(i,i);oi;         V;K}$               
+20  : V->l                l;dl;nti;i=i(i,i);oi;         V;K}$               
 21  : SAVESTATE:          5
-21  :                     l;ol;nti;i=i(i);              l;K}$               
-22  :                     ;ol;nti;i=i(i);               ;K}$                
-23  :                     ol;nti;i=i(i);                K}$                 
-24  : K->oV;K             ol;nti;i=i(i);                K}$                 
+21  :                     l;dl;nti;i=i(i,i);oi;         l;K}$               
+22  :                     ;dl;nti;i=i(i,i);oi;          ;K}$                
+23  :                     dl;nti;i=i(i,i);oi;           K}$                 
+24  : K->dV;K             dl;nti;i=i(i,i);oi;           K}$                 
 25  : SAVESTATE:          6
-25  :                     ol;nti;i=i(i);                oV;K}$              
-26  :                     l;nti;i=i(i);                 V;K}$               
-27  : V->l                l;nti;i=i(i);                 V;K}$               
+25  :                     dl;nti;i=i(i,i);oi;           dV;K}$              
+26  :                     l;nti;i=i(i,i);oi;            V;K}$               
+27  : V->l                l;nti;i=i(i,i);oi;            V;K}$               
 28  : SAVESTATE:          7
-28  :                     l;nti;i=i(i);                 l;K}$               
-29  :                     ;nti;i=i(i);                  ;K}$                
-30  :                     nti;i=i(i);                   K}$                 
-31  : K->nti=V;K          nti;i=i(i);                   K}$                 
+28  :                     l;nti;i=i(i,i);oi;            l;K}$               
+29  :                     ;nti;i=i(i,i);oi;             ;K}$                
+30  :                     nti;i=i(i,i);oi;              K}$                 
+31  : K->nti=V;K          nti;i=i(i,i);oi;              K}$                 
 32  : SAVESTATE:          8
-32  :                     nti;i=i(i);                   nti=V;K}$           
-33  :                     ti;i=i(i);                    ti=V;K}$            
-34  :                     i;i=i(i);                     i=V;K}$             
-35  :                     ;i=i(i);                      =V;K}$              
+32  :                     nti;i=i(i,i);oi;              nti=V;K}$           
+33  :                     ti;i=i(i,i);oi;               ti=V;K}$            
+34  :                     i;i=i(i,i);oi;                i=V;K}$             
+35  :                     ;i=i(i,i);oi;                 =V;K}$              
 36  : TS_NOK/NS_NORULECHАIN
 36  : RESSTATE            
-36  :                     nti;i=i(i);                   K}$                 
-37  : K->nti=W;K          nti;i=i(i);                   K}$                 
+36  :                     nti;i=i(i,i);oi;              K}$                 
+37  : K->nti=W;K          nti;i=i(i,i);oi;              K}$                 
 38  : SAVESTATE:          8
-38  :                     nti;i=i(i);                   nti=W;K}$           
-39  :                     ti;i=i(i);                    ti=W;K}$            
-40  :                     i;i=i(i);                     i=W;K}$             
-41  :                     ;i=i(i);                      =W;K}$              
+38  :                     nti;i=i(i,i);oi;              nti=W;K}$           
+39  :                     ti;i=i(i,i);oi;               ti=W;K}$            
+40  :                     i;i=i(i,i);oi;                i=W;K}$             
+41  :                     ;i=i(i,i);oi;                 =W;K}$              
 42  : TS_NOK/NS_NORULECHАIN
 42  : RESSTATE            
-42  :                     nti;i=i(i);                   K}$                 
-43  : K->nti;K            nti;i=i(i);                   K}$                 
+42  :                     nti;i=i(i,i);oi;              K}$                 
+43  : K->nti;K            nti;i=i(i,i);oi;              K}$                 
 44  : SAVESTATE:          8
-44  :                     nti;i=i(i);                   nti;K}$             
-45  :                     ti;i=i(i);                    ti;K}$              
-46  :                     i;i=i(i);                     i;K}$               
-47  :                     ;i=i(i);                      ;K}$                
-48  :                     i=i(i);                       K}$                 
-49  : K->i=W;K            i=i(i);                       K}$                 
+44  :                     nti;i=i(i,i);oi;              nti;K}$             
+45  :                     ti;i=i(i,i);oi;               ti;K}$              
+46  :                     i;i=i(i,i);oi;                i;K}$               
+47  :                     ;i=i(i,i);oi;                 ;K}$                
+48  :                     i=i(i,i);oi;                  K}$                 
+49  : K->i=W;K            i=i(i,i);oi;                  K}$                 
 50  : SAVESTATE:          9
-50  :                     i=i(i);                       i=W;K}$             
-51  :                     =i(i);                        =W;K}$              
-52  :                     i(i);                         W;K}$               
-53  : W->i                i(i);                         W;K}$               
+50  :                     i=i(i,i);oi;                  i=W;K}$             
+51  :                     =i(i,i);oi;                   =W;K}$              
+52  :                     i(i,i);oi;                    W;K}$               
+53  : W->i                i(i,i);oi;                    W;K}$               
 54  : SAVESTATE:          10
-54  :                     i(i);                         i;K}$               
-55  :                     (i);                          ;K}$                
+54  :                     i(i,i);oi;                    i;K}$               
+55  :                     (i,i);oi;                     ;K}$                
 56  : TS_NOK/NS_NORULECHАIN
 56  : RESSTATE            
-56  :                     i(i);                         W;K}$               
-57  : W->iF               i(i);                         W;K}$               
+56  :                     i(i,i);oi;                    W;K}$               
+57  : W->iF               i(i,i);oi;                    W;K}$               
 58  : SAVESTATE:          10
-58  :                     i(i);                         iF;K}$              
-59  :                     (i);                          F;K}$               
-60  : F->(N)              (i);                          F;K}$               
+58  :                     i(i,i);oi;                    iF;K}$              
+59  :                     (i,i);oi;                     F;K}$               
+60  : F->(N)              (i,i);oi;                     F;K}$               
 61  : SAVESTATE:          11
-61  :                     (i);                          (N);K}$             
-62  :                     i);                           N);K}$              
-63  : N->i                i);                           N);K}$              
+61  :                     (i,i);oi;                     (N);K}$             
+62  :                     i,i);oi;                      N);K}$              
+63  : N->i                i,i);oi;                      N);K}$              
 64  : SAVESTATE:          12
-64  :                     i);                           i);K}$              
-65  :                     );                            );K}$               
-66  :                     ;                             ;K}$                
-67  :                                                   K}$                 
-68  : LENTA_END           
-69  : ------>LENTA_END    
+64  :                     i,i);oi;                      i);K}$              
+65  :                     ,i);oi;                       );K}$               
+66  : TS_NOK/NS_NORULECHАIN
+66  : RESSTATE            
+66  :                     i,i);oi;                      N);K}$              
+67  : N->i,N              i,i);oi;                      N);K}$              
+68  : SAVESTATE:          12
+68  :                     i,i);oi;                      i,N);K}$            
+69  :                     ,i);oi;                       ,N);K}$             
+70  :                     i);oi;                        N);K}$              
+71  : N->i                i);oi;                        N);K}$              
+72  : SAVESTATE:          13
+72  :                     i);oi;                        i);K}$              
+73  :                     );oi;                         );K}$               
+74  :                     ;oi;                          ;K}$                
+75  :                     oi;                           K}$                 
+76  : K->oV;K             oi;                           K}$                 
+77  : SAVESTATE:          14
+77  :                     oi;                           oV;K}$              
+78  :                     i;                            V;K}$               
+79  : V->i                i;                            V;K}$               
+80  : SAVESTATE:          15
+80  :                     i;                            i;K}$               
+81  :                     ;                             ;K}$                
+82  :                                                   K}$                 
+83  : LENTA_END           
+84  : ------>LENTA_END    
 ===================================================================================
-0   : всего строк 28, синтаксический анализ выполнен без ошибок 
+0   : всего строк 33, синтаксический анализ выполнен без ошибок 
 0   : S->m{K}             
 2   : K->nti=V;K          
 6   : V->l                
 8   : K->nti=V;K          
 12  : V->l                
-14  : K->oV;K             
+14  : K->dV;K             
 15  : V->l                
 17  : K->nti;K            
 21  : K->i=W;K            
 23  : W->iF               
 24  : F->(N)              
-25  : N->i                
+25  : N->i,N              
+27  : N->i                
+30  : K->oV;K             
+31  : V->i                
 
 ====================  КОНЕЧНЫЕ ТАБЛИЦЫ ЛЕКСЕМ И ИДЕНТИФИКАТОРОВ  ===================
 ===============================  ТАБЛИЦА ЛЕКСЕМ  ==================================
@@ -137,7 +161,7 @@
 |11  | =       |  4     |             |
 |12  | l       |  4     |3            |
 |13  | ;       |  4     |             |
-|14  | o       |  6     |             |
+|14  | d       |  6     |             |
 |15  | l       |  6     |4            |
 |16  | ;       |  6     |             |
 |17  | n       |  8     |             |
@@ -149,8 +173,13 @@
 |23  | i       |  9     |6            |
 |24  | (       |  9     |             |
 |25  | i       |  9     |0            |
-|26  | )       |  9     |             |
-|27  | ;       |  9     |             |
+|26  | ,       |  9     |             |
+|27  | i       |  9     |2            |
+|28  | )       |  9     |             |
+|29  | ;       |  9     |             |
+|30  | o       |  11    |             |
+|31  | i       |  11    |5            |
+|32  | ;       |  11    |             |
 =============================  ТАБЛИЦА ИДЕНТИФИКАТОРОВ  ============================
 
 |  N  |СТРОКА В ТЛ| ТИП ИДЕНТИФИКАТОРА |        ИМЯ        | ЗНАЧЕНИЕ (ПАРАМЕТРЫ)
@@ -160,7 +189,7 @@
 |3    |  12       | string     literal |  LTRL2            |[8]Hello123
 |4    |  15       | string     literal |  LTRL3            |[11]Привет Мир!
 |5    |  19       |  number   variable |  mainlen          |0
-|6    |  23       |  number   LIB FUNC |  atoii            | P0:STRING |
+|6    |  23       |  number   LIB FUNC |  strcomp          | P0:STRING | P1:STRING |
 
 ===================================================================================
 
@@ -170,9 +199,10 @@
 1   | m{
 3   | nti[0]=l[1];
 4   | nti[2]=l[3];
-6   | ol[4];
+6   | dl[4];
 8   | nti[5];
-9   | i[5]=i[6](i[0]);
+9   | i[5]=i[6](i[0],i[2]);
+11  | oi[5];
 ===================================================================================
 
 Программа успешно завершена!

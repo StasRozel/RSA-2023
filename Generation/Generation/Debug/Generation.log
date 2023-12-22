@@ -1,10 +1,10 @@
-﻿Сборка начата 22.12.2023 4:06:01.
+﻿Сборка начата 22.12.2023 5:20:36.
 Уровень детализации журнала: Normal.     1>Проект "E:\Универ\2_курс\Курсач_КПО\RSA-2023\Generation\Generation\Generation.vcxproj" в узле 2 (целевые объекты Build).
      1>InitializeBuildStatus:
          Создание "Debug\Generation.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
        _MASM:
          Assembling Generation.asm...
-         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmpf8e57fffae46445998b3ce35c9bf5e2a.cmd"
+         cmd.exe /C "C:\Users\rozel\AppData\Local\Temp\tmpc673d0a1f492447ea29629a0b4c3e461.cmd"
          ml.exe /c /nologo /Zi /Fo"Debug\Generation.obj" /W3 /errorReport:prompt  /TaGeneration.asm
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.exe" /INCREMENTAL /ILK:"Debug\Generation.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Универ\2_курс\Курсач_КПО\RSA-2023\Debug\Generation.lib" /MACHINE:X86 Debug\Generation.obj
@@ -18,4 +18,4 @@
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:00.79
+Прошло времени 00:00:03.73
