@@ -60,6 +60,7 @@ namespace Gener		// генерация кода в assembler
 			{
 				switch (LEXEMA(j))
 				{
+				case LEX_LITERAL_NUMO:
 				case LEX_LITERAL:
 				case LEX_ID:
 				{

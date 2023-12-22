@@ -2,7 +2,7 @@
 .model flat, stdcall
 includelib libucrt.lib
 includelib kernel32.lib
-includelib "../Debug/GenLib.lib
+includelib "E:/Универ/2_курс/Курсач_КПО/RSA-2023/Debug/GenLib.lib"
 ExitProcess PROTO:DWORD 
 .stack 4096
 
@@ -21,23 +21,34 @@ ExitProcess PROTO:DWORD
 
 .const
 		newline byte 13, 10, 0
-		LTRL1 byte 'Привет мир! ПРиветтт ААААААААААААААААА', 0
-		LTRL2 byte 'GGGGGGGGGGG', 0
+		LTRL1 byte '1', 0
+		LTRL2 byte 'Hello123', 0
+		LTRL3 byte 'Привет Мир!', 0
 .data
 		temp sdword ?
 		buffer byte 256 dup(0)
-		mainx dword ?
-		mainy dword ?
+		mainstr dword ?
+		mainstrw dword ?
+		mainlen sdword 0
 .code
 
 ;------------- MAIN --------------
 main PROC
 
-mov mainx, offset LTRL1
-mov mainy, offset LTRL2
+mov mainstr, offset LTRL1
+mov mainstrw, offset LTRL2
 
-push mainx
+push offset LTRL3
 call outstr
+
+
+push mainstr
+push offset buffer
+call atoii
+push eax
+
+pop ebx
+mov mainlen, ebx
 
 push 0
 call ExitProcess

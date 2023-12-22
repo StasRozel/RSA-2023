@@ -1,8 +1,10 @@
-main
-{
-	variable: string x = "Привет мир! ПРиветтт ААААААААААААААААА";
-	variable: string y = "GGGGGGGGGGG";
+main {
+	
+	variable: string str = "1";
+	variable: string strw = "Hello123";
 
-	write x;
+	write "Привет Мир!";
 
+	variable: number len;
+	len = atoii(str);
 }

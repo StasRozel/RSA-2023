@@ -44,30 +44,10 @@ extern "C"
 	}
 
 
+
 	int __stdcall outnum(int value)									// вывод в консоль целочисленного литерала
 	{
 		std::cout << value;
-		return 0;
-	}
-
-	int __stdcall strcomp(char* str1, char* str2) // сравнивает две строки
-	{
-		int i = NULL, len1 = NULL, len2 = NULL;
-		for (; str1[len1] != '\0'; len1++);
-		for (; str2[len2] != '\0'; len2++);
-		int length = len1 > len2 ? len2 : len1;
-		for (int k = 0; i < length; k++, i++)
-		{
-			if (str1[k] != str2[i])
-			{
-				if (str1[k] > str2[i])
-					return 1;
-				else if (str1[k] < str2[i])
-					return -1;
-			}
-		}
-		if (len1 != len2)
-			return len1 > len2 ? 1 : -1;
 		return 0;
 	}
 

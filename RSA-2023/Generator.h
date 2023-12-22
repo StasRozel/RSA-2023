@@ -13,7 +13,7 @@
 ".model flat, stdcall\n"\
 "includelib libucrt.lib\n"\
 "includelib kernel32.lib\n"\
-"includelib \"../Debug/GenLib.lib\n"\
+"includelib \"E:/Универ/2_курс/Курсач_КПО/RSA-2023/Debug/GenLib.lib\"\n"\
 "ExitProcess PROTO:DWORD \n"\
 ".stack 4096\n"
 

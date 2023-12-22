@@ -17,7 +17,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		In::IN in = In::getin(parm.in, log.stream);								// считать входной файл
 		Log::writeIn(log.stream, in);											// записать информацию о входном файле
 
-
 		in.words = In::getWordsTable(log.stream, in.text, in.code, in.size);	// разобрать на токены
 		Lexer::LEX tables;														// создать таблицу лексем
 		bool lex_ok = Lexer::analyze(tables, in, log, parm);					// выполнить Ћ≈ —»„≈— »… анализ
@@ -28,14 +27,17 @@ int _tmain(int argc, _TCHAR* argv[])
 			Log::writeLine(&std::cout, LEXERROR, STOP, "");						// ошибка лексического анализа
 			return 0;
 		}
-		else
+		else 
 			Log::writeLine(&std::cout, LEXGOOD, "");							// успешна€ запись в протокол
-
+		
 
 		MFST_TRACE_START(log.stream);
 		MFST::Mfst mfst(tables, GRB::getGreibach());							// выполнить —»Ќ“ј —»„≈— »… анализ
 		bool synt_ok = mfst.start(log);
 		
+		mfst.savededucation();
+		mfst.printrules(log);													// вывести дерево разбора
+
 		if (!synt_ok)
 		{
 			Log::writeLine(log.stream, SYNTERROR, "");
@@ -44,7 +46,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		else
 			Log::writeLine(&std::cout, SYNTGOOD, "");							// успешна€ запись в протокол
-
 
 		bool sem_ok = Semantic::semanticsCheck(tables, log);					// выполнить —≈ћјЌ“»„≈— »… анализ
 		if (!sem_ok)
@@ -56,7 +57,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		else
 			Log::writeLine(&std::cout, SEMGOOD, "");							// успешна€ запись в протокол
 
-
 		bool polish_ok = Polish::PolishNotation(tables, log);					// выполнить преобразование выражений в ѕќЋ»«
 		if (!polish_ok)
 		{
@@ -65,13 +65,6 @@ int _tmain(int argc, _TCHAR* argv[])
 			return 0;
 		}
 		else Log::writeLine(&std::cout, POLISHGOOD, "");						// успешна€ запись в протокол
-
-		LT::writeLexTable(log.stream, tables.lextable);							// записать в протокол таблицу лексем
-		IT::writeIdTable(log.stream, tables.idtable);							// и таблицу идентификаторов
-		LT::writeLexemsOnLines(log.stream, tables.lextable);					// и соответствие лексем исходному коду
-
-		mfst.savededucation();
-		mfst.printrules(log);													// вывести дерево разбора
 
 		Log::writeLine(log.stream, MESSAGE, "");								// запись в протокол после преобразовани€ выражений
 		LT::writeLexTable(log.stream, tables.lextable);							// записать таблицу лексем
@@ -82,13 +75,12 @@ int _tmain(int argc, _TCHAR* argv[])
 		LT::writeLexTable(&std::cout, tables.lextable);							// вывести в консоль таблицу лексем
 		LT::writeLexemsOnLines(&std::cout, tables.lextable);					// вывести в консоль соответствие лексем и токенов
 
-
 		Gener::CodeGeneration(tables, parm, log);								// выполнить генерацию кода
 		Log::writeLine(log.stream, ALLGOOD, "");								// итог работы программы
 		Log::writeLine(&std::cout, ALLGOOD, "");								// в протокол и в консось
 		Log::Close(log);													    // закрыть протокол
 
-		system("E:\\”нивер\\2_курс\\ урсач_ ѕќ\\RSA-2023\\Debug\\Generation.exe");
+		//system("E:\\”нивер\\2_курс\\ урсач_ ѕќ\\RSA-2023\\Debug\\Generation.exe");
 	}
 
 

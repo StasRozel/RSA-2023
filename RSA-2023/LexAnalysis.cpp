@@ -261,6 +261,46 @@ namespace Lexer
 		return itentry;
 	}
 
+	int hexToDec(const char* hex) {
+
+		int dec = 0;
+		int power = 1;
+
+		for (int i = strlen(hex) - 1; i >= 0; i--) {
+
+			if (hex[i] >= '0' && hex[i] <= '9') {
+				dec += (hex[i] - '0') * power;
+			}
+			else if (hex[i] >= 'A' && hex[i] <= 'F') {
+				dec += (hex[i] - 'A' + 10) * power;
+			}
+
+			power *= 16;
+		}
+
+		return dec;
+	}
+
+	void intToChar(int num, char result[]) {
+		int i = 0;
+		while (num > 0) {
+			result[i++] = (num % 10) + '0';
+			num /= 10;
+		}
+		result[i] = '\0'; // завершающий нуль
+
+		// переворачиваем строку
+		int start = 0;
+		int end = i - 1;
+		while (start < end) {
+			char tmp = result[start];
+			result[start] = result[end];
+			result[end] = tmp;
+			start++;
+			end--;
+		}
+	}
+
 	bool analyze(LEX& tables, In::IN& in, Log::LOG& log, Parm::PARM& parm)		// анализ действий при встрече соответствующих лексем
 	{
 		static bool lex_ok = true;
@@ -416,6 +456,36 @@ namespace Lexer
 							if (lexema == LEX_LITERAL || lexema == LEX_LITERAL_NUMO)
 								idxTI = getLiteralIndex(tables.idtable, curword, getType(id, in.words[i - 1].word)); // или литерала
 						}
+						break;
+					}
+					case LEX_LITERAL_NUMO: 
+					{
+						char id[STR_MAXSIZE] = "";
+						idxTI = NULLDX_TI;		// индекс идентификатора в ТИ
+						if (*nextword == LEX_LEFTHESIS)
+							isFunc = true;					// идентификатор функции
+						char* idtype = (isFunc && i > 1) ?	// тип идентификатора
+							in.words[i - 2].word : in.words[i - 1].word;		// пропускаем ключевое слово function
+						if (!isFunc && !scopes.empty())
+							strncpy_s(id, scopes.top(), MAXSIZE_ID);
+						strncat(id, curword, MAXSIZE_ID);
+						if (isLiteral(curword))
+							strcpy_s(id, curword);	// литерал заменяется своим значением
+						char curwordhex[STR_MAXSIZE];
+						char curworddec[STR_MAXSIZE];
+						int number = 0;
+						int len = strlen(curword) - 1;
+
+						strncpy_s(id, curword + 1, len); 
+						number = hexToDec(id);
+
+						intToChar(number, curworddec);
+						
+						IT::Entry* itentry = getEntry(tables, 'l', curworddec, idtype, isParam, isFunc, log, curline, lex_ok);
+
+						IT::Add(tables.idtable, *itentry);
+
+						idxTI = tables.idtable.size - 1;
 					}
 					break;
 					}
